@@ -1,0 +1,102 @@
+html, body {
+  margin: 0;
+  padding: 0; }
+
+html {
+  font-size: 10px; }
+
+body {
+  font-size: 1.4rem;
+  color: #181818;
+  font-family: "Khula", sans-serif; }
+
+a {
+  text-decoration: none;
+  font-family: "Khula", sans-serif; }
+
+.header {
+  box-sizing: border-box;
+  width: 1025px;
+  padding: 0 40px;
+  margin: 0 auto; }
+  .header .header-inner {
+    height: 95px;
+    position: relative;
+    border-bottom: 5px solid #181818; }
+  .header .logo {
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 110px;
+    height: 25px;
+    top: 50%;
+    transform: translateY(-50%); }
+    .header .logo img {
+      display: block;
+      width: 100%; }
+  .header .gnb {
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    position: absolute;
+    right: 60px; }
+    .header .gnb::after {
+      content: "";
+      display: table;
+      clear: both; }
+  .header .gnb > li {
+    float: left;
+    position: relative; }
+    .header .gnb > li:nth-child(6) ul {
+      display: block;
+      left: -200px; }
+    .header .gnb > li:nth-child(4) ul {
+      left: -200px; }
+    .header .gnb > li:nth-child(5) ul {
+      left: -270px; }
+  .header .gnb > li > a {
+    color: #181818;
+    font-size: 1.9rem;
+    font-weight: bold;
+    display: block;
+    padding: 0 13px;
+    line-height: 100px; }
+  .header .submenu {
+    display: none;
+    margin: 0;
+    padding-left: 0;
+    list-style: none;
+    position: absolute;
+    top: 100px;
+    height: 50px;
+    white-space: nowrap; }
+    .header .submenu::after {
+      content: "";
+      display: table;
+      clear: both; }
+    .header .submenu li {
+      display: inline-block;
+      padding: 0 13px; }
+      .header .submenu li:first-child {
+        padding-left: 0; }
+    .header .submenu a {
+      color: #aaa;
+      font-size: 1.4rem;
+      display: block;
+      line-height: 50px; }
+      .header .submenu a:hover {
+        color: #181818; }
+  .header .cart {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    background-color: #181818;
+    text-align: center;
+    line-height: 33px;
+    border-radius: 50%;
+    color: #fff;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0; }
+
+/*# sourceMappingURL=drjart.css.map */
