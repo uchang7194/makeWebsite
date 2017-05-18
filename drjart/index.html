@@ -14,8 +14,15 @@
         <header class="header">
             <div class="header-inner">
                 <h2 class="logo">
-                    <img src="images/drjart_logo320.png" alt="drjart 로고 이미지">
+                    <a href="#">
+                        <img src="images/drjart_logo320.png" alt="drjart 로고 이미지">
+                    </a>
                 </h2>
+                <a href="#" class="mobile-menubtn">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </a>
                 <nav>
                     <ul class="gnb">
                         <li>
@@ -76,6 +83,13 @@
                 <a href="#" class="cart">0</a>
             </div>
         </header>
+        <script>
+            $(function(){
+                $(".mobile-menubtn").on("click",function(){
+                    $("nav").toggleClass("visible");
+                });
+            });
+        </script>
     </div>
 </body>
 </html>
