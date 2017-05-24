@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>shoppingmall &lt; yuyu.com</title>
+  <link rel="stylesheet" href="./css/modules/init.css">
+  <link rel="stylesheet" href="./css/stylesheet.css">
+  <style>
+    .box-wrapper {
+      background: #ff0;
+    }
+    .box {
+      height: 126px;
+      background: #333;
+      color: #fff;
+      text-align: center;
+      line-height: 126px;
+    }
+    .gap {
+      margin-bottom: 21px;
+    }
+  </style>
+</head>
+<body class="show-grid">
+
+  <header class="header">
+    <h1 class="header-heading">헤더영역입니다.</h1>
+    <div class="header-inner container"> 
+      <div class="row">
+        <a class="logo col is-3" href="#">
+          <div class="img-box">
+            <img src="images/header/logo.png" alt="로고 이미지">
+          </div>
+        </a>
+        <form action="javascript:click('전송하였습니다.');" class="search col is-4 is-offset-1">
+          <!--<h2 class="search-heading">검색 영역입니다.</h2>-->
+          <fieldset>
+            <legend>검색 영역입니다.</legend>
+            <label for="search-input">검색</label>
+            <input type="text" id="search-input" placeholder="검색어를 입력하세요.">
+            <button class="search-btn" type="submit"></button>
+          </fieldset>
+        </form>
+        <div class="user-info col is-2 is-offset-2">
+          <h2 class="user-heading">유저정보 영역입니다.</h2>
+          <ul>
+            <li><a href="#">회원가입</a></li>
+            <li><a href="#">로그인</a></li>
+          </ul>
+        </div>
+      </div>
+      <nav class="navigation row">
+        <h2 class="menu-heading">메뉴 영역입니다.</h2>
+        <div class="col is-12">
+            <ul>
+              <li><a href="#">main</a></li>
+              <li><a href="#">brand</a></li>
+              <li><a href="#">special</a></li>
+              <li><a href="#">outer</a></li>
+              <li><a href="#">tops</a></li>
+              <li><a href="#">bottom</a></li>
+              <li><a href="#">dress</a></li>
+              <li><a href="#">shoes</a></li>
+              <li><a href="#">bag</a></li>
+              <li><a href="#">acc</a></li>
+              <li><a href="#">summer</a></li>
+              <li><a href="#">etc</a></li>
+            </ul>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <main class="main">
+    <h1 class="main-heading">메인 영역입니다.</h1>
+    <div class="filter" aria-descriptby="filter-descript">
+      <p id="filter-descript">연령별, 스타일별로 제품을 필터링합니다.</p>
+      <a class="filter-btn" role="button">
+        <span></span>필터를 설정하세요
+      </a>
+    </div>
+  </main>
+  <div class="container">
+    <div class="row gap">
+      <div class="box col is-4">4</div>
+      <div class="col is-8">
+        <div class="box-wrapper row is-nesting">
+          <div class="box col is-1 is-offset-1">1</div>
+          <div class="box col is-4 is-offset-1">4</div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="box col is-4">column 1/3</div>
+      <div class="box col is-4">column 1/3</div>
+      <div class="box col is-4">column 1/3</div>
+    </div>
+  </div>
+
+<script src="./js/toggleGrid.js"></script>
+</body>
+</html>

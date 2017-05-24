@@ -1,0 +1,34 @@
+@import "settings";
+@import "mixin";
+@import "placeholder";
+
+
+.filter {
+    $user-font-color: #991717;
+    $filter-height: $row-height * 2;
+    height: $filter-height;
+    background: #ddd;
+    line-height: $filter-height;
+    text-align: center;         
+
+    #filter-descript {
+        @extend %a11y-hidden;
+    }
+    .filter-btn {
+        display: block;
+        color: $user-font-color;
+        cursor: pointer;
+    }
+    span {
+        position: relative;
+        top: 2px;
+        display: inline-block;
+        box-sizing: content-box;
+        width: 16px;
+        height: 12px;
+        margin-right: 6px;
+        background: url("../images/icons/icons.png") no-repeat;
+        background-position: 0 -48.5px;
+        background-size: cover;
+    }
+}
