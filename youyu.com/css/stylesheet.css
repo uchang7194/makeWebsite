@@ -1,0 +1,411 @@
+/**
+ *
+ * header variable settings
+ *
+ */
+/*! grid.css @ 2017, yamoo9.net */
+/**
+ *
+ * header variable settings
+ *
+ */
+.show-grid {
+  position: relative;
+}
+
+.show-grid::before,
+.show-grid::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100vh;
+}
+
+.show-grid::before {
+  z-index: 10000;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(180deg, transparent 20px, #0cf 20px);
+  background-size: 1px 21px;
+}
+
+.show-grid::after {
+  z-index: 10010;
+  left: 50%;
+  width: 1080px;
+  background: linear-gradient(90deg, transparent 10px, rgba(251, 137, 137, 0.35) 10px, rgba(251, 137, 137, 0.35) 80px, transparent 80px);
+  background-size: 90px 1px;
+  transform: translateX(-50%);
+}
+
+.container {
+  width: 1080px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.row.is-nesting > :first-child {
+  margin-left: 0;
+}
+
+.row.is-nesting > :last-child {
+  margin-right: 0;
+}
+
+.col {
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.is-1 {
+  width: 70px;
+}
+
+.is-offset-1 {
+  margin-left: 100px;
+}
+
+.is-nesting .is-offset-1:first-child {
+  margin-left: 90px;
+}
+
+.is-2 {
+  width: 160px;
+}
+
+.is-offset-2 {
+  margin-left: 190px;
+}
+
+.is-nesting .is-offset-2:first-child {
+  margin-left: 180px;
+}
+
+.is-3 {
+  width: 250px;
+}
+
+.is-offset-3 {
+  margin-left: 280px;
+}
+
+.is-nesting .is-offset-3:first-child {
+  margin-left: 270px;
+}
+
+.is-4 {
+  width: 340px;
+}
+
+.is-offset-4 {
+  margin-left: 370px;
+}
+
+.is-nesting .is-offset-4:first-child {
+  margin-left: 360px;
+}
+
+.is-5 {
+  width: 430px;
+}
+
+.is-offset-5 {
+  margin-left: 460px;
+}
+
+.is-nesting .is-offset-5:first-child {
+  margin-left: 450px;
+}
+
+.is-6 {
+  width: 520px;
+}
+
+.is-offset-6 {
+  margin-left: 550px;
+}
+
+.is-nesting .is-offset-6:first-child {
+  margin-left: 540px;
+}
+
+.is-7 {
+  width: 610px;
+}
+
+.is-offset-7 {
+  margin-left: 640px;
+}
+
+.is-nesting .is-offset-7:first-child {
+  margin-left: 630px;
+}
+
+.is-8 {
+  width: 700px;
+}
+
+.is-offset-8 {
+  margin-left: 730px;
+}
+
+.is-nesting .is-offset-8:first-child {
+  margin-left: 720px;
+}
+
+.is-9 {
+  width: 790px;
+}
+
+.is-offset-9 {
+  margin-left: 820px;
+}
+
+.is-nesting .is-offset-9:first-child {
+  margin-left: 810px;
+}
+
+.is-10 {
+  width: 880px;
+}
+
+.is-offset-10 {
+  margin-left: 910px;
+}
+
+.is-nesting .is-offset-10:first-child {
+  margin-left: 900px;
+}
+
+.is-11 {
+  width: 970px;
+}
+
+.is-offset-11 {
+  margin-left: 1000px;
+}
+
+.is-nesting .is-offset-11:first-child {
+  margin-left: 990px;
+}
+
+.is-12 {
+  width: 1060px;
+}
+
+.is-offset-12 {
+  margin-left: 1090px;
+}
+
+.is-nesting .is-offset-12:first-child {
+  margin-left: 1080px;
+}
+
+/**
+ *
+ * header variable settings
+ *
+ */
+*[class$="heading"], .search legend, .search label, .filter #filter-descript {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  margin: -1px;
+}
+
+.header {
+  box-sizing: border-box;
+  border-bottom: 3px solid #bd1d31;
+}
+
+.header .header-inner {
+  height: 185px;
+  box-sizing: border-box;
+  padding-top: 42px;
+}
+
+.logo {
+  display: block;
+}
+
+.logo .img-box {
+  width: 172px;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+.search {
+  height: 42px;
+  padding-top: 10.5px;
+  box-sizing: content-box;
+  position: relative;
+}
+
+.search fieldset {
+  border: 0 none;
+  padding: 0;
+}
+
+.search input[type="text"] {
+  padding: 0 20px;
+  margin-left: -22px;
+  width: 100%;
+  height: 38px;
+  border: 2px solid #181818;
+  font-family: "NanumSquareOTFEB";
+}
+
+.search .search-btn {
+  display: block;
+  position: absolute;
+  z-index: 999;
+  right: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 0;
+  margin: 5.25px 0 0 0;
+  border: 0 none;
+  width: 40px;
+  height: 40px;
+  background: url("../images/header/search_icon.png") no-repeat;
+  background-position: center center;
+  cursor: pointer;
+}
+
+.user-info {
+  margin-top: 21px;
+}
+
+.user-info ul {
+  box-sizing: border-box;
+  position: relative;
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.user-info ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.user-info li {
+  float: left;
+  margin-left: 20px;
+  box-sizing: border-box;
+}
+
+.user-info li:first-child {
+  margin-left: 0;
+  width: calc(4em + 22px);
+}
+
+.user-info a {
+  text-decoration: none;
+  box-sizing: border-box;
+  color: #991717;
+  padding: 5px 11px;
+  border-radius: 2px;
+  letter-spacing: -0.03em;
+}
+
+.user-info a:hover {
+  border: 1px solid #bf1d1d;
+}
+
+.navigation {
+  position: relative;
+  top: -8px;
+  margin-top: 40px;
+}
+
+.navigation ul {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.navigation ul::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.navigation li {
+  float: left;
+  margin-right: 28px;
+}
+
+.navigation li:last-child {
+  margin-right: 0;
+}
+
+.navigation a {
+  color: #333;
+  padding: 7px 15px;
+  text-transform: uppercase;
+  border-radius: 2px;
+  font-size: 1.1rem;
+}
+
+.navigation a:hover {
+  color: #fff;
+  background: #bd1d31;
+}
+
+/**
+ *
+ * header variable settings
+ *
+ */
+*[class$="heading"], .search legend, .search label, .filter #filter-descript {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  margin: -1px;
+}
+
+.filter {
+  height: 42px;
+  background: #ddd;
+  line-height: 42px;
+  text-align: center;
+}
+
+.filter .filter-btn {
+  display: block;
+  color: #991717;
+  cursor: pointer;
+}
+
+.filter span {
+  position: relative;
+  top: 2px;
+  display: inline-block;
+  box-sizing: content-box;
+  width: 16px;
+  height: 12px;
+  margin-right: 6px;
+  background: url("../images/icons/icons.png") no-repeat;
+  background-position: 0 -48.5px;
+  background-size: cover;
+}
+
+/*# sourceMappingURL=../map/stylesheet.css.map */

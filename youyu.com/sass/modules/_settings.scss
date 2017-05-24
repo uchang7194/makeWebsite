@@ -43,3 +43,13 @@ $page-width: ($column-width + $gutter-width) * $columns;
 @function offset-width($n) {
   @return column-width($n) + ($gutter-width + $half-gutter-width);
 }
+
+
+
+/**
+ *
+ * header variable settings
+ *
+ */
+
+$row-height: 21px;

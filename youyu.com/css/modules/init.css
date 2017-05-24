@@ -10,8 +10,12 @@ body {
   margin: 0;
   font-size: 1.4rem; /* 14px */
   line-height: 1.5;  /* 21px */
+  font-family: "NanumSquareOTF";
 }
 
+a {
+  text-decoration: none;
+}
 *,
 *::before,
 *::after {
