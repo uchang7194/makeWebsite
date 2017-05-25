@@ -3,15 +3,15 @@
 @import "placeholder";
 
 $header-height: $row-height * 9;
-*[class$="heading"] {
-    @extend %a11y-hidden;
-}
+// *.a11y-hidden {
+//     @extend %a11y-hidden;
+// }
 .header {
     box-sizing: border-box;
     border-bottom: 3px solid #bd1d31;
     .header-inner {
-        height: $header-height - 4;
         box-sizing: border-box;
+        height: $header-height - 3;
         padding-top: $row-height * 2;
     }
 }

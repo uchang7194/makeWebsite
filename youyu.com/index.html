@@ -7,6 +7,7 @@
   <title>shoppingmall &lt; yuyu.com</title>
   <link rel="stylesheet" href="./css/modules/init.css">
   <link rel="stylesheet" href="./css/stylesheet.css">
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <style>
     .box-wrapper {
       background: #ff0;
@@ -26,7 +27,7 @@
 <body class="show-grid">
 
   <header class="header">
-    <h1 class="header-heading">헤더영역입니다.</h1>
+    <h1 class="a11y-hidden">헤더영역입니다.</h1>
     <div class="header-inner container"> 
       <div class="row">
         <a class="logo col is-3" href="#">
@@ -44,7 +45,7 @@
           </fieldset>
         </form>
         <div class="user-info col is-2 is-offset-2">
-          <h2 class="user-heading">유저정보 영역입니다.</h2>
+          <h2 class="a11y-hidden">유저정보 영역입니다.</h2>
           <ul>
             <li><a href="#">회원가입</a></li>
             <li><a href="#">로그인</a></li>
@@ -52,7 +53,7 @@
         </div>
       </div>
       <nav class="navigation row">
-        <h2 class="menu-heading">메뉴 영역입니다.</h2>
+        <h2 class="a11y-hidden">메뉴 영역입니다.</h2>
         <div class="col is-12">
             <ul>
               <li><a href="#">main</a></li>
@@ -73,30 +74,541 @@
     </div>
   </header>
   <main class="main">
-    <h1 class="main-heading">메인 영역입니다.</h1>
-    <div class="filter" aria-descriptby="filter-descript">
-      <p id="filter-descript">연령별, 스타일별로 제품을 필터링합니다.</p>
-      <a class="filter-btn" role="button">
-        <span></span>필터를 설정하세요
-      </a>
+    <h1 class="a11y-hidden">메인 영역입니다.</h1>
+    <!-- s:filter -->
+    <div class="filter" aria-describedby="filter-descript">
+      <div class="container">
+        <p id="filter-descript">연령별, 스타일별로 제품을 필터링합니다.</p>
+         <div class="row">
+          <a class="filter-btn col is-2 is-offset-5" role="button">
+            <span></span>필터를 설정하세요
+          </a>
+         </div> 
+        <!-- e:filter-content -->
+        <form action="javascript:click('스타일 필터링합니다.')" class="filter-content row">
+          <fieldset>
+            <legend>연령대와 스타일을 선택합니다.</legend>
+            <!-- s:age -->
+            <div class="age row">
+              <div class="title col is-1">
+                <span>연령대</span>
+              </div>
+              <div class="col is-11">
+                <ul class="filter-list">
+                  <li>
+                    <input type="checkbox" id="teen" name="age" value="teen">
+                    <label for="teen">10대</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="twenty" name="age" value="twenty">
+                    <label for="twenty">20대</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="thirty" name="age" value="thirty">
+                    <label for="thirty">30대</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- e:age -->
+            <!-- s:style -->
+            <div class="style row">
+              <div class="title col is-1">
+                <span>스타일</span>
+              </div>
+              <div class="col is-11">
+                <ul class="filter-list">
+                  <li>
+                    <input type="checkbox" id="girl" name="style" value="girl">
+                    <label for="girl">소녀룩</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="modern" name="style" value="modern">
+                    <label for="modern">모던시크</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="simple-beige" name="style" value="simple-beige">
+                    <label for="simple-beige">심플베이지</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="romantic" name="style" value="romantic">
+                    <label for="romantic">로맨틱</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="office" name="style" value="office">
+                    <label for="office">오피스룩</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="campus" name="style" value="campus">
+                    <label for="campus">캠퍼스룩</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="vintage" name="style" value="vintage">
+                    <label for="vintage">빈티지</label>
+                  </li>
+                  <li>
+                    <input type="checkbox" id="training" name="style" value="training">
+                    <label for="training">트레이닝</label>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <!-- e:style -->
+            <!-- s:btn-box -->
+            <div class="btn-box row">
+              <div class="btn-inner-box col is-3 is-offset-5">
+                <button class="reset-btn" type="button">초기화</button>
+                <button class="submit-btn" type="submit">필터 선택 완료</button>
+              </div>
+            </div>
+            <!-- e:btn-box -->
+          </fieldset>
+        </form>
+      </div>
+     
+      <script>
+        $(function(){
+          
+          var filter_flag = false;
+
+          $(".filter-btn").on("click", function(e){
+            // e.preventDefault();
+            if (!filter_flag){
+              $(".filter").css("height", "231px");
+              console.log("down");
+              filter_flag = true;
+            } else {
+              $(".filter").css("height", "42px");
+              console.log("up");
+              filter_flag = false;
+            }
+          });
+        });
+      </script>
+      <!-- e:filter-content -->
     </div>
-  </main>
-  <div class="container">
-    <div class="row gap">
-      <div class="box col is-4">4</div>
-      <div class="col is-8">
-        <div class="box-wrapper row is-nesting">
-          <div class="box col is-1 is-offset-1">1</div>
-          <div class="box col is-4 is-offset-1">4</div>
+    <!-- e:filter -->
+    <!-- s:banner -->
+    <div class="banner container">
+      <div class="row">
+        <div class="banner-view col is-12">
+          <img src="images/banner/banner-01.jpg" alt="">
+          <div class="anchor-box">
+            <span class="actived-achor-btn" role="button"></span>
+            <span role="button"></span>
+            <span role="button"></span>
+            <span role="button"></span>
+            <span role="button"></span>
+            <span role="button"></span>
+            <span role="button"></span>
+            <span role="button"></span>
+            <span role="button"></span>
+            <span role="button"></span>
+          </div>
         </div>
       </div>
     </div>
-    <div class="row">
-      <div class="box col is-4">column 1/3</div>
-      <div class="box col is-4">column 1/3</div>
-      <div class="box col is-4">column 1/3</div>
+    <!-- e:banner -->
+    <!-- s:bestseller -->
+    <div class="best-seller container">
+      <div class="row">
+        <h2 class="best-seller-heading col is-2">베스트 셀러</h2>
+      </div>
+      <ul class="best-seller-list row">
+        <li class="col is-3">
+          <a href="#" role="button">
+            <figure>
+              <div class="img-box">
+                <img src="images/best-seller/bs-seller-01.jpg" alt="">
+              </div>
+              <figcaption>
+                <strong class="best-seller-title">Zemma World</strong>
+                Puppy-코튼니트
+              </figcaption>
+            </figure>
+            <div class="price_like">
+              <span class="price">39,000원</span>
+              <button class="like-btn like-actived" type="button"></button>
+            </div>
+          </a>
+        </li>
+        <li class="col is-3">
+          <a href="#" role="button">
+            <figure>
+              <div class="img-box">
+                <img src="images/best-seller/bs-seller-02.jpg" alt="">
+              </div>
+              <figcaption>
+                <strong class="best-seller-title">myblin</strong>
+                버튼 체크 원피스
+              </figcaption>
+            </figure>
+            <div class="price_like">
+              <span class="price">41,000원</span>
+              <button class="like-btn" type="button"></button>
+            </div>
+          </a>
+        </li>
+        <li class="col is-3">
+          <a href="#" role="button">
+            <figure>
+              <div class="img-box">
+                <img src="images/best-seller/bs-seller-03.jpg" alt="">
+              </div>
+              <figcaption>
+                <strong class="best-seller-title">BULLAN GIRL</strong>
+                아미라벨맨투맨
+              </figcaption>
+            </figure>
+            <div class="price_like">
+              <span class="price">12,500원</span>
+              <button class="like-btn" type="button"></button>
+            </div>
+          </a>
+        </li>
+        <li class="col is-3">
+          <a href="#" role="button">
+            <figure>
+              <div class="img-box">
+                <img src="images/best-seller/bs-seller-04.jpg" alt="">
+              </div>
+              <figcaption>
+                <strong class="best-seller-title">MINIBONG</strong>
+                Night-스키니팬츠
+              </figcaption>
+            </figure>
+            <div class="price_like">
+              <span class="price">29,900원</span>
+              <button class="like-btn like-actived" type="button"></button>
+            </div>
+          </a>
+        </li>
+      </ul>
     </div>
-  </div>
+    <!-- e:bestseller -->
+    <!-- s:brand -->
+    <div class="brand container">
+      <div class="row">
+        <h2 class="brand-heading col is-2">브랜드</h2>
+      </div>
+      <div class="brand-group row">
+        <ul class="brand-list row is-nesing">
+          <li class="col is-3">
+            <a href="#" role="button">
+              <img src="images/brand/brand-01.jpg" alt="">
+              <span class="title">mixxmix</span>
+              <div class="brand-like-box">
+                <span>01.mixxmix</span>
+                <button class="brand-like-btn"></button>
+              </div>
+            </a>
+          </li>
+          <li class="col is-3">
+            <a href="#" role="button">
+              <img src="images/brand/brand-02.jpg" alt="">
+              <span class="title">REINE</span>
+              <div class="brand-like-box">
+                <span>02.REINE</span>
+                <button class="brand-like-btn"></button>
+              </div>
+            </a>
+          </li>
+          <li class="col is-3">
+            <a href="#" role="button">
+              <img src="images/brand/brand-03.jpg" alt="">
+              <span class="title">BANHALA</span>
+              <div class="brand-like-box">
+                <span>03.BANHALA</span>
+                <button class="brand-like-btn"></button>
+              </div>
+            </a>
+          </li>
+          <li class="col is-3">
+            <a href="#" role="button">
+              <img src="images/brand/brand-04.jpg" alt="">
+              <span class="title">CHERRYKOKO</span>
+              <div class="brand-like-box">
+                <span>04.CHERRYKOKO</span>
+                <button class="brand-like-btn"></button>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <div class="brand-btn">
+          <button class="left"></button>
+          <button class="right"></button>
+        </div>
+      </div>
+    </div>
+    <!-- e:brand -->
+    <!-- s:brandnew -->
+    <div class="brandnew container">
+      <div class="row">
+        <h2 class="brandnew-heading col is-2">신상품</h2>
+      </div>
+      <ul class="brandnew-list row">
+        <li class="col is-3">
+          <a href="#" role="button">
+            <figure>
+              <div class="img-box">
+                <img src="images/brandnew/brandnew-1.jpg" alt="">
+              </div>
+              <figcaption>
+                <strong class="brandnew-title">Monobabies</strong>
+                엘렌 니트원피스
+              </figcaption>
+            </figure>
+            <div class="price_like">
+              <span class="price">55,500원</span>
+              <button class="like-btn like-actived" type="button"></button>
+            </div>
+          </a>
+        </li>
+        <li class="col is-3">
+          <a href="#" role="button">
+            <figure>
+              <div class="img-box">
+                <img src="images/brandnew/brandnew-2.jpg" alt="">
+              </div>
+              <figcaption>
+                <strong class="brandnew-title">From Beginning</strong>
+                Ohkoos vintage Knit
+              </figcaption>
+            </figure>
+            <div class="price_like">
+              <span class="price">26,600원</span>
+              <button class="like-btn" type="button"></button>
+            </div>
+          </a>
+        </li>
+        <li class="col is-3">
+          <a href="#" role="button">
+            <figure>
+              <div class="img-box">
+                <img src="images/brandnew/brandnew-3.jpg" alt="">
+              </div>
+              <figcaption>
+                <strong class="brandnew-title">Zemma World</strong>
+                Tied-골지니트
+              </figcaption>
+            </figure>
+            <div class="price_like">
+              <span class="price">22,000원</span>
+              <button class="like-btn" type="button"></button>
+            </div>
+          </a>
+        </li>
+        <li class="col is-3">
+          <a href="#" role="button">
+            <figure>
+              <div class="img-box">
+                <img src="images/brandnew/brandnew-4.jpg" alt="">
+              </div>
+              <figcaption>
+                <strong class="brandnew-title">daily monday</strong>
+                Buckle Wrap mini skirt
+              </figcaption>
+            </figure>
+            <div class="price_like">
+              <span class="price">27,000원</span>
+              <button class="like-btn like-actived" type="button"></button>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- e:brandnew -->
+    <!-- s:tip -->
+    <div class="tip container">
+      <div class="row">
+        <h2 class="tip-heading col is-2">언니의 팁</h2>
+      </div>
+      <div class="tip-group row">
+        <ul class="tip-list row">
+          <li class="col is-4">
+            <a href="#">
+              <img src="images/tip/product-1.jpg" alt="">
+            </a>
+          </li>
+          <li class="col is-4">
+            <a href="#">
+              <img src="images/tip/product-2.jpg" alt="">
+            </a>
+          </li>
+          <li class="col is-4">
+            <a href="#">
+              <img src="images/tip/product-3.jpg" alt="">
+            </a>
+          </li>
+        </ul>
+        <div class="anchor-box">
+          <span role="button"></span>
+          <span role="button"></span>
+          <span role="button"></span>
+          <span role="button"></span>
+          <span role="button"></span>
+          <span role="button"></span>
+          <span role="button"></span>
+          <span role="button"></span>
+          <span class="actived-achor-btn" role="button"></span>
+        </div>
+      </div>
+    </div>
+    <!-- e:tip -->
+    <!-- s:best-review -->
+    <div class="best-review container">
+      <div class="row">
+        <h2 class="best-review-heading col is-2">베스트리뷰</h2>
+      </div>
+      <ul class="best-review-list row">
+        <li class="col is-2">
+          <a href="#" role="button">
+            <figure>
+              <div class="img-box">
+                <img src="images/best-review/bs-product-01.jpg" alt="">
+              </div>
+              <figcaption>
+                <strong class="best-review-title">따뜻해줘 가디언</strong>
+                배송은 쇼핑몰에서 입고가 늦어져서 ...
+              </figcaption>
+            </figure>
+            <div class="price_like">
+              <span class="price">31,900원</span>
+              <button class="like-btn like-actived" type="button"></button>
+            </div>
+            <div class="gpa">
+              <span class="actived-gpa-btn" role="button"></span>
+              <span role="button"></span>
+              <span role="button"></span>
+              <span role="button"></span>
+              <span role="button"></span>
+            </div>
+          </a>
+        </li>
+        <li class="col is-2">
+          <a href="#" role="button">
+            <figure>
+              <div class="img-box">
+                <img src="images/best-review/bs-product-02.jpg" alt="">
+              </div>
+              <figcaption>
+                <strong class="best-review-title">버클트임박시후드</strong>
+                후기를 너무 늦게었네요ㅠ딱 제가 ...
+              </figcaption>
+            </figure>
+            <div class="price_like">
+              <span class="price">30,600원</span>
+              <button class="like-btn" type="button"></button>
+            </div>
+            <div class="gpa">
+              <span class="actived-gpa-btn" role="button"></span>
+              <span role="button"></span>
+              <span role="button"></span>
+              <span role="button"></span>
+              <span role="button"></span>
+            </div>
+          </a>
+        </li>
+        <li class="col is-2">
+          <a href="#" role="button">
+            <figure>
+              <div class="img-box">
+                <img src="images/best-review/bs-product-03.jpg" alt="">
+              </div>
+              <figcaption>
+                <strong class="best-review-title">Chic-자켓</strong>
+                어깨가 좀 있는 편이어서 오버핏으...
+              </figcaption>
+            </figure>
+            <div class="price_like">
+              <span class="price">49,000원</span>
+              <button class="like-btn like-actived" type="button"></button>
+            </div>
+            <div class="gpa">
+              <span class="actived-gpa-btn" role="button"></span>
+              <span role="button"></span>
+              <span role="button"></span>
+              <span role="button"></span>
+              <span role="button"></span>
+            </div>
+          </a>
+        </li>
+        <li class="col is-2">
+          <a href="#" role="button">
+            <figure>
+              <div class="img-box">
+                <img src="images/best-review/bs-product-04.jpg" alt="">
+              </div>
+              <figcaption>
+                <strong class="best-review-title">마실로 루즈핏 니...</strong>
+                베이지색상 가디건 필요했었는데 마침...
+              </figcaption>
+            </figure>
+            <div class="price_like">
+              <span class="price">19,000원</span>
+              <button class="like-btn" type="button"></button>
+            </div>
+            <div class="gpa">
+              <span class="actived-gpa-btn" role="button"></span>
+              <span role="button"></span>
+              <span role="button"></span>
+              <span role="button"></span>
+              <span role="button"></span>
+            </div>
+          </a>
+        </li>
+        <li class="col is-2">
+          <a href="#" role="button">
+            <figure>
+              <div class="img-box">
+                <img src="images/best-review/bs-product-05.jpg" alt="">
+              </div>
+              <figcaption>
+                <strong class="best-review-title">멜라니 트렌치 코트</strong>
+                Lorem ipsum dolor sit amet,
+              </figcaption>
+            </figure>
+            <div class="price_like">
+              <span class="price">19,000원</span>
+              <button class="like-btn" type="button"></button>
+            </div>
+            <div class="gpa">
+              <span class="actived-gpa-btn" role="button"></span>
+              <span role="button"></span>
+              <span role="button"></span>
+              <span role="button"></span>
+              <span role="button"></span>
+            </div>
+          </a>
+        </li>
+        <li class="col is-2">
+          <a href="#" role="button">
+            <figure>
+              <div class="img-box">
+                <img src="images/best-review/bs-product-06.jpg" alt="">
+              </div>
+              <figcaption>
+                <strong class="best-review-title">Luci-브이넥니트</strong>
+                노랑노랑하니 봄분위기 나고좋아...
+              </figcaption>
+            </figure>
+            <div class="price_like">
+              <span class="price">24,000원</span>
+              <button class="like-btn like-actived" type="button"></button>
+            </div>
+            <div class="gpa">
+              <span class="actived-gpa-btn" role="button"></span>
+              <span role="button"></span>
+              <span role="button"></span>
+              <span role="button"></span>
+              <span role="button"></span>
+            </div>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <!-- e:best-review -->
+  </main>
 
 <script src="./js/toggleGrid.js"></script>
 </body>
