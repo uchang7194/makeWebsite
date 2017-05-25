@@ -1,3 +1,5 @@
+@import "placeholder";
+
 @mixin clearfix{
     &::after{
         content: "";
@@ -9,4 +11,30 @@
     list-style: none;
     margin: 0;
     padding-left: 0;
+}
+@mixin init-last-mgr{
+    &:last-child {
+        margin-right: 0;
+    }
+}
+@mixin init-first-mgl{
+    &:last-child {
+        margin-left: 0;
+    }
+}
+@mixin init-form {
+    fieldset {
+        border: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    legend {
+        @extend %a11y-hidden;
+    }
+}
+@mixin init-button {
+    border: none;
+    padding: 0;
+    margin: 0;
 }

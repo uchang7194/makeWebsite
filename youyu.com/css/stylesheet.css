@@ -18,7 +18,7 @@
   content: '';
   position: absolute;
   top: 0;
-  height: 100vh;
+  height: 1000vh;
 }
 
 .show-grid::before {
@@ -213,14 +213,40 @@
  * header variable settings
  *
  */
-*[class$="heading"], .search legend, .search label, .filter #filter-descript {
+.search legend, .search label, .filter #filter-descript, .filter-content legend, .filter-content .filter-list li input[type="checkbox"] {
+  overflow: hidden;
   position: absolute;
+  clip: rect(0 0 0 0);
+  /* IE 6,7 */
+  clip: rect(0, 0, 0, 0);
   width: 1px;
   height: 1px;
-  clip: rect(0, 0, 0, 0);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
   margin: -1px;
+  border: 0;
+  padding: 0;
+}
+
+.brand-list img, .brandnew-list .img-box img, .tip-list img, .best-review-list .img-box img {
+  width: 100%;
+  height: auto;
+}
+
+.search legend, .search label, .filter #filter-descript, .filter-content legend, .filter-content .filter-list li input[type="checkbox"] {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  /* IE 6,7 */
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+}
+
+.brand-list img, .brandnew-list .img-box img, .tip-list img, .best-review-list .img-box img {
+  width: 100%;
+  height: auto;
 }
 
 .header {
@@ -229,8 +255,8 @@
 }
 
 .header .header-inner {
-  height: 185px;
   box-sizing: border-box;
+  height: 186px;
   padding-top: 42px;
 }
 
@@ -372,21 +398,52 @@
  * header variable settings
  *
  */
-*[class$="heading"], .search legend, .search label, .filter #filter-descript {
+.search legend, .search label, .filter #filter-descript, .filter-content legend, .filter-content .filter-list li input[type="checkbox"] {
+  overflow: hidden;
   position: absolute;
+  clip: rect(0 0 0 0);
+  /* IE 6,7 */
+  clip: rect(0, 0, 0, 0);
   width: 1px;
   height: 1px;
-  clip: rect(0, 0, 0, 0);
-  clip: rect(0 0 0 0);
-  overflow: hidden;
   margin: -1px;
+  border: 0;
+  padding: 0;
+}
+
+.brand-list img, .brandnew-list .img-box img, .tip-list img, .best-review-list .img-box img {
+  width: 100%;
+  height: auto;
+}
+
+.search legend, .search label, .filter #filter-descript, .filter-content legend, .filter-content .filter-list li input[type="checkbox"] {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  /* IE 6,7 */
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+}
+
+.brand-list img, .brandnew-list .img-box img, .tip-list img, .best-review-list .img-box img {
+  width: 100%;
+  height: auto;
 }
 
 .filter {
-  height: 42px;
-  background: #ddd;
   line-height: 42px;
   text-align: center;
+  position: absolute;
+  width: 100%;
+  height: 42px;
+  background: #ddd;
+  overflow: hidden;
+  transition: height 1s;
+  z-index: 999;
 }
 
 .filter .filter-btn {
@@ -395,17 +452,540 @@
   cursor: pointer;
 }
 
-.filter span {
+.filter .filter-btn span {
   position: relative;
   top: 2px;
   display: inline-block;
   box-sizing: content-box;
-  width: 16px;
-  height: 12px;
+  width: 20px;
+  height: 16px;
   margin-right: 6px;
   background: url("../images/icons/icons.png") no-repeat;
-  background-position: 0 -48.5px;
+  background-position: 0 -61px;
   background-size: cover;
+}
+
+.filter-content {
+  line-height: 1.5;
+  text-align: left;
+}
+
+.filter-content fieldset {
+  border: none;
+  padding: 0;
+  margin: 0;
+}
+
+.filter-content .title {
+  line-height: 21px;
+}
+
+.filter-content .title span {
+  color: #333;
+  font-size: 1.8rem;
+}
+
+.filter-content .filter-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+  margin-left: -20px;
+}
+
+.filter-content .filter-list::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.filter-content .filter-list li {
+  float: left;
+  margin-right: 10px;
+}
+
+.filter-content .filter-list li:last-child {
+  margin-right: 0;
+}
+
+.filter-content .filter-list li input[type="checkbox"]:checked ~ label {
+  background: #991717;
+}
+
+.filter-content .filter-list li label {
+  padding: 4px 23px;
+  background: #aaa;
+  font-size: 1.2rem;
+  color: #fff;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+.filter-content .age, .filter-content .style {
+  margin-top: 21px;
+}
+
+.btn-box {
+  margin-left: -30px;
+  margin-top: 44.625px;
+  margin-bottom: 21px;
+}
+
+.btn-box button {
+  border: none;
+  padding: 0;
+  margin: 0;
+  padding: 8px 22px;
+  margin-right: 10px;
+  font-size: 1.5rem;
+  border-radius: 15.5px;
+  background: #aaa;
+  color: #fff;
+  cursor: pointer;
+  font-family: "NanumSquareOTF";
+}
+
+.btn-box button:last-child {
+  margin-right: 0;
+}
+
+.btn-box button:hover {
+  background: #bd1d31;
+}
+
+/**
+ *
+ * header variable settings
+ *
+ */
+.search legend, .search label, .filter #filter-descript, .filter-content legend, .filter-content .filter-list li input[type="checkbox"] {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  /* IE 6,7 */
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+}
+
+.brand-list img, .brandnew-list .img-box img, .tip-list img, .best-review-list .img-box img {
+  width: 100%;
+  height: auto;
+}
+
+.search legend, .search label, .filter #filter-descript, .filter-content legend, .filter-content .filter-list li input[type="checkbox"] {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  /* IE 6,7 */
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+}
+
+.brand-list img, .brandnew-list .img-box img, .tip-list img, .best-review-list .img-box img {
+  width: 100%;
+  height: auto;
+}
+
+.main {
+  position: relative;
+}
+
+.banner .anchor-box, .tip .anchor-box {
+  position: absolute;
+}
+
+.banner .anchor-box::after, .tip .anchor-box::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.banner .anchor-box span, .tip .anchor-box span {
+  float: left;
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #ccc;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.banner .anchor-box span:last-child, .tip .anchor-box span:last-child {
+  margin-right: 0;
+}
+
+.banner .anchor-box span.actived-achor-btn, .tip .anchor-box span.actived-achor-btn {
+  background: #bd1d31;
+}
+
+.best-seller-list .price_like, .brandnew-list .price_like, .best-review-list .price_like {
+  margin-top: 21px;
+  height: 21px;
+  line-height: 21px;
+  position: relative;
+}
+
+.best-seller-list .price_like .price, .brandnew-list .price_like .price, .best-review-list .price_like .price {
+  color: #991717;
+  font-size: 1.8rem;
+}
+
+.best-seller-list .price_like .like-btn, .brandnew-list .price_like .like-btn, .best-review-list .price_like .like-btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 21px;
+  height: 21px;
+  background: url("../images/icons/icons.png");
+  background-size: cover;
+  background-position: 0 -106px;
+  cursor: pointer;
+}
+
+.best-seller-list .price_like .like-btn.like-actived, .brandnew-list .price_like .like-btn.like-actived, .best-review-list .price_like .like-btn.like-actived {
+  background-position: 0 -85px;
+}
+
+.banner {
+  position: relative;
+  padding-top: 84px;
+}
+
+.banner .banner-view {
+  height: 441px;
+  box-sizing: border-box;
+}
+
+.banner .banner-view img {
+  width: 100%;
+  height: auto;
+}
+
+.banner .anchor-box {
+  left: 50%;
+  bottom: -36.25px;
+  transform: translateX(-50%);
+}
+
+.best-seller .best-seller-heading, .brand .brand-heading, .brandnew .brandnew-heading, .tip .tip-heading, .best-review .best-review-heading {
+  color: #333;
+  margin-top: 21px;
+  margin-bottom: 21px;
+  font-size: 2.1rem;
+  height: 21px;
+  line-height: 1;
+}
+
+.best-seller {
+  margin-top: 63px;
+}
+
+.best-seller-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.best-seller-list li:hover > a {
+  border: 2px solid #bd1d31;
+}
+
+.best-seller-list a {
+  display: block;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.best-seller-list figure {
+  margin: 0;
+  height: 273px;
+}
+
+.best-seller-list .img-box {
+  height: 210px;
+}
+
+.best-seller-list .img-box img {
+  display: inline-block;
+}
+
+.best-seller-list figcaption {
+  margin-top: 11.5px;
+  text-align: left;
+  color: #666;
+}
+
+.best-seller-list figcaption strong {
+  display: block;
+  color: #333;
+}
+
+.brand {
+  margin-top: 42px;
+}
+
+.brand .brand-heading {
+  margin-top: 0;
+}
+
+.brand .brand-group {
+  position: relative;
+  height: 147px;
+}
+
+.brand-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.brand-list li {
+  float: left;
+}
+
+.brand-list a {
+  display: block;
+  position: relative;
+  z-index: 999;
+  box-sizing: border-box;
+  height: 147px;
+}
+
+.brand-list a:hover {
+  border: 2px solid #bd1d31;
+}
+
+.brand-list a:hover .brand-like-box {
+  bottom: -2px;
+}
+
+.brand-list .title, .brand-list .brand-like-box {
+  position: absolute;
+}
+
+.brand-list .title {
+  top: 41%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 2rem;
+  font-weight: bold;
+  color: #fff;
+  text-shadow: 1px -1px 0 0 #ddd;
+  letter-spacing: -0.03em;
+}
+
+.brand-list .brand-like-box {
+  width: 100%;
+  bottom: 0;
+  height: 21px;
+  background: rgba(0, 0, 0, 0.5);
+  box-sizing: border-box;
+}
+
+.brand-list .brand-like-box span {
+  display: inline-block;
+  padding-left: 9px;
+  color: #fff;
+}
+
+.brand-list .brand-like-box .brand-like-btn {
+  border: none;
+  padding: 0;
+  margin: 0;
+  width: 21px;
+  height: 21px;
+  background: url("../images/icons/icons.png");
+  background-size: cover;
+  background-position: 0 -106px;
+  position: absolute;
+  right: 9px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.brand-btn {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+}
+
+.brand-btn button {
+  position: absolute;
+  display: inline-block;
+  width: 20px;
+  height: 100%;
+  border: 1px solid #ddd;
+  background-size: cover;
+  cursor: pointer;
+}
+
+.brand-btn button.left {
+  left: -20px;
+  background: url("../images/icons/arrow-l.png") no-repeat, #f0f0f0;
+  background-position: center, center;
+}
+
+.brand-btn button.right {
+  right: -20px;
+  background: url("../images/icons/arrow-r.png") no-repeat, #f0f0f0;
+  background-position: center, center;
+}
+
+.brandnew {
+  margin-top: 42px;
+}
+
+.brandnew-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.brandnew-list li:hover > a {
+  border: 2px solid #bd1d31;
+}
+
+.brandnew-list a {
+  display: block;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  padding: 21px;
+}
+
+.brandnew-list figure {
+  margin: 0;
+  height: 294px;
+}
+
+.brandnew-list .img-box {
+  height: 231px;
+}
+
+.brandnew-list .img-box img {
+  display: inline-block;
+}
+
+.brandnew-list figcaption {
+  margin-top: 21px;
+  text-align: left;
+  color: #666;
+}
+
+.brandnew-list figcaption strong {
+  display: block;
+  color: #333;
+}
+
+.tip {
+  margin-top: 42px;
+}
+
+.tip .tip-group {
+  position: relative;
+}
+
+.tip .anchor-box {
+  right: 10px;
+  top: -36.75px;
+}
+
+.tip-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.tip-list li {
+  float: left;
+}
+
+.tip-list a {
+  display: block;
+  z-index: 999;
+  height: 231px;
+}
+
+.best-review {
+  margin-top: 42px;
+  box-sizing: border-box;
+}
+
+.best-review-list {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.best-review-list li:hover > a {
+  border: 2px solid #bd1d31;
+}
+
+.best-review-list a {
+  display: block;
+  border: 1px solid #ddd;
+  box-sizing: border-box;
+  padding: 20px;
+}
+
+.best-review-list figure {
+  margin: 0;
+  height: 210px;
+}
+
+.best-review-list .img-box {
+  height: 126px;
+}
+
+.best-review-list .img-box img {
+  display: inline-block;
+}
+
+.best-review-list figcaption {
+  margin-top: 21px;
+  text-align: left;
+  color: #666;
+  white-space: wrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.best-review-list figcaption strong {
+  display: block;
+  color: #333;
+}
+
+.best-review-list .gpa {
+  margin-top: 21px;
+  height: 21px;
+  text-align: center;
+}
+
+.best-review-list .gpa span {
+  display: inline-block;
+  width: 17px;
+  height: 16px;
+  background: url("../images/icons/icons.svg") no-repeat;
+  background-size: cover;
+  background-position: 0 -168px;
+  cursor: pointer;
+}
+
+.best-review-list .gpa span.actived-gpa-btn {
+  background-position: 0 -151px;
 }
 
 /*# sourceMappingURL=../map/stylesheet.css.map */

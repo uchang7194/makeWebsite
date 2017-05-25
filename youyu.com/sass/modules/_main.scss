@@ -2,33 +2,372 @@
 @import "mixin";
 @import "placeholder";
 
-
-.filter {
-    $user-font-color: #991717;
-    $filter-height: $row-height * 2;
-    height: $filter-height;
-    background: #ddd;
-    line-height: $filter-height;
-    text-align: center;         
-
-    #filter-descript {
-        @extend %a11y-hidden;
-    }
-    .filter-btn {
-        display: block;
-        color: $user-font-color;
-        cursor: pointer;
-    }
+.main {
+    position: relative;
+}
+%anchor-box-property {
+    position: absolute;
+    $anchor-bg-color: #ccc;
+    $actived-anchor-bg-color: #bd1d31;
+    @include clearfix;
     span {
-        position: relative;
-        top: 2px;
-        display: inline-block;
-        box-sizing: content-box;
-        width: 16px;
-        height: 12px;
-        margin-right: 6px;
-        background: url("../images/icons/icons.png") no-repeat;
-        background-position: 0 -48.5px;
+        float: left;
+        display: block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: $anchor-bg-color;
+        margin-right: 10px;
+        @include init-last-mgr;
+        cursor: pointer;
+
+        &.actived-achor-btn{
+            background: $actived-anchor-bg-color;
+        }
+
+    }
+}
+%like-btn-property {
+    margin-top: $row-height;
+    height: $row-height;
+    line-height: $row-height;
+    position: relative;
+
+    .price {
+        color: #991717;
+        font-size: 1.8rem;
+    }
+    .like-btn {
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        @include init-button;
+        width: 21px;
+        height: 21px;
+        background: url("../images/icons/icons.png");
         background-size: cover;
+        background-position: 0 -106px;
+        cursor: pointer;
+        
+        &.like-actived {
+            background-position: 0 -85px;
+        }
+    }
+}
+.banner {
+    position: relative;
+    padding-top: $row-height * 4;
+    .banner-view {
+        
+        // background: url("../images/banner/banner-01.jpg") no-repeat;
+        // background-size: cover;
+         height: $row-height * 21;
+         box-sizing: border-box;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .anchor-box {
+        left: 50%;
+        bottom: -($row-height + $row-height / 4 + 10);
+        transform: translateX(-50%);
+        @extend %anchor-box-property;
+    }
+}
+%heading-property {
+    color: #333;
+    margin-top: $row-height;
+    margin-bottom: $row-height;
+    font-size: 2.1rem;
+    height: $row-height;
+    line-height: 1;
+}
+.best-seller {
+    margin-top: $row-height * 3;
+    .best-seller-heading {
+        @extend %heading-property;
+    }
+}
+.best-seller-list {
+    @include init-list-property;
+
+    li {
+        &:hover > a {
+            border: 2px solid #bd1d31;
+        }
+    }
+    a {
+        display: block;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+        padding: 20px;
+        
+    }
+    figure {
+        margin: 0;
+        height: $row-height * 13;
+    }
+    .img-box {
+        height: $row-height * 10;
+        img {
+            display: inline-block;
+        }
+    }
+    figcaption {
+        margin-top: $row-height / 2 + 1;
+        text-align: left;
+        color: #666;
+        strong {
+            display: block;
+            color: #333;
+        }
+    }
+    .price_like {
+        @extend %like-btn-property;
+    }
+}
+
+.brand {
+    margin-top: $row-height * 2;
+    .brand-heading {
+       @extend %heading-property;
+       margin-top: 0;
+    }
+    .brand-group {
+        position: relative;
+        height: $row-height * 7;
+    }
+}
+.brand-list {
+    @include init-list-property;
+    li {
+        float: left;
+    }
+    a {
+        display: block;
+        position: relative;
+        z-index: 999;
+        box-sizing: border-box;
+        height: $row-height * 7;
+        &:hover {
+            border: 2px solid #bd1d31;
+        }
+
+        &:hover .brand-like-box{
+            bottom: -2px;
+        }
+    }
+    img {
+        @extend %responsive-object;
+    }
+    .title, .brand-like-box {
+        position: absolute;
+    }
+    .title {
+        top: 41%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 2rem;
+        font-weight: bold;
+        color: #fff;
+        text-shadow: 1px -1px 0 0 #ddd;
+        letter-spacing: -0.03em;
+    }
+    .brand-like-box {
+        width: 100%;
+        bottom: 0;
+        height: $row-height;
+        background: rgba(0, 0, 0, 0.5);
+        box-sizing: border-box;
+        span {
+            display: inline-block;
+            padding-left: 9px;
+            color: #fff;
+        }
+        .brand-like-btn {
+            @include init-button;
+            width: 21px;
+            height: 21px;
+            background: url("../images/icons/icons.png");
+            background-size: cover;
+            background-position: 0 -106px;
+            position: absolute;
+            right: 9px;
+            top: 50%;
+            transform: translateY(-50%);
+        }
+    }
+}
+.brand-btn {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+
+    button {
+        position: absolute;
+        display: inline-block;
+        width: $gutter-width;
+        height: 100%;
+        border: 1px solid #ddd;
+        background-size: cover;
+        cursor: pointer;
+
+        &.left {
+            left: -20px;
+            background: url("../images/icons/arrow-l.png") no-repeat, #f0f0f0;
+            background-position: center, center;
+        }
+
+        &.right {
+            right: -20px;
+            background: url("../images/icons/arrow-r.png") no-repeat, #f0f0f0;
+            background-position: center, center;
+        }
+    }
+}
+
+.brandnew {
+    margin-top: $row-height * 2;
+    .brandnew-heading {
+        @extend %heading-property;
+    }
+}
+.brandnew-list {
+    @include init-list-property;
+
+    li {
+        &:hover > a {
+            border: 2px solid #bd1d31;
+        }
+    }
+    a {
+        display: block;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+        padding: 21px;
+    }
+    figure {
+        margin: 0;
+        height: $row-height * 14;
+    }
+    .img-box {
+        height: $row-height * 11;
+        img {
+            display: inline-block;
+            @extend %responsive-object;
+        }
+    }
+    figcaption {
+        margin-top: $row-height;
+        text-align: left;
+        color: #666;
+        strong {
+            display: block;
+            color: #333;
+        }
+        
+    }
+    .price_like {
+        @extend %like-btn-property;
+    }
+}
+
+.tip {
+    margin-top: $row-height * 2;
+    .tip-heading {
+        @extend %heading-property;
+    }
+    .tip-group {
+        position: relative;
+    }
+    .anchor-box {
+        @extend %anchor-box-property;
+        right: $half-gutter-width;
+        top : -($row-height + $row-height/4*3);
+    }
+}
+.tip-list {
+    @include init-list-property;
+    li {
+        float: left;
+    }
+    a {
+        display: block;
+        z-index: 999;
+        height: $row-height * 11;
+    }
+    img {
+        @extend %responsive-object;
+    }
+}
+
+.best-review {
+    margin-top: $row-height * 2;
+    box-sizing: border-box;
+    .best-review-heading {
+        @extend %heading-property;
+    }
+}
+.best-review-list {
+    @include init-list-property;
+
+    li {
+        &:hover > a {
+            border: 2px solid #bd1d31;
+        }
+    }
+    a {
+        display: block;
+        border: 1px solid #ddd;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+    figure {
+        margin: 0;
+        height: $row-height * 10;
+    }
+    .img-box {
+        height: $row-height * 6;
+        img {
+            display: inline-block;
+            @extend %responsive-object;
+        }
+    }
+    figcaption {
+        margin-top: $row-height;
+        text-align: left;
+        color: #666;
+        white-space: wrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        strong {
+            display: block;
+            color: #333;
+        }
+        
+    }
+    .price_like {
+        @extend %like-btn-property;
+    }
+    .gpa {
+        margin-top: $row-height;
+        height: $row-height;
+        text-align: center;
+        span {
+            display: inline-block;
+            width: 17px;
+            height: 16px;
+            background: url("../images/icons/icons.svg") no-repeat;
+            background-size: cover;
+            background-position: 0 -168px;
+            cursor: pointer;
+
+            &.actived-gpa-btn {
+                background-position: 0 -151px; 
+            }
+        }
     }
 }
