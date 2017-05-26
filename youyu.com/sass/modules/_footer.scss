@@ -46,7 +46,7 @@ $emphasize-font-weight: bold;
         color: $a-font-color;
         position: relative;
         border-radius: 2px;
-        &:hover {
+        &:hover, &:focus {
             background: $a-hover-bg-color;
             color: $a-hover-font-color;
         }
@@ -127,7 +127,7 @@ $emphasize-font-weight: bold;
             border: 1px solid #aaa;
             border-radius: 2px;
             
-            &:hover {
+            &:hover, &:focus {
                 background: linear-gradient(to bottom, #8121b3 10%, #c43062 50%, #d88341 90%);
                 border: none;
             }

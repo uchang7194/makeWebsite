@@ -93,17 +93,15 @@
 .best-seller-list {
     @include init-list-property;
 
-    li {
-        &:hover > a {
-            border: 2px solid #bd1d31;
-        }
-    }
     a {
         display: block;
         border: 1px solid #ddd;
         box-sizing: border-box;
         padding: 20px;
         
+        &:hover, &:focus {
+            border: 2px solid #bd1d31;
+        }
     }
     figure {
         margin: 0;
@@ -151,11 +149,12 @@
         z-index: 999;
         box-sizing: border-box;
         height: $row-height * 7;
-        &:hover {
+        &:hover, &:focus {
             border: 2px solid #bd1d31;
         }
 
-        &:hover .brand-like-box{
+        &:hover .brand-like-box,
+        &:focus .brand-like-box {
             bottom: -2px;
         }
     }
@@ -238,16 +237,14 @@
 .brandnew-list {
     @include init-list-property;
 
-    li {
-        &:hover > a {
-            border: 2px solid #bd1d31;
-        }
-    }
     a {
         display: block;
         border: 1px solid #ddd;
         box-sizing: border-box;
         padding: 21px;
+        &:hover, &:focus {
+            border: 2px solid #bd1d31;
+        }
     }
     figure {
         margin: 0;
@@ -291,13 +288,13 @@
 }
 .tip-list {
     @include init-list-property;
-    li {
-        float: left;
-    }
     a {
         display: block;
         z-index: 999;
         height: $row-height * 11;
+        &:hover, &:focus {
+            border: 2px solid #bd1d31;
+        }
     }
     img {
         @extend %responsive-object;
@@ -314,16 +311,14 @@
 .best-review-list {
     @include init-list-property;
 
-    li {
-        &:hover > a {
-            border: 2px solid #bd1d31;
-        }
-    }
     a {
         display: block;
         border: 1px solid #ddd;
         box-sizing: border-box;
         padding: 20px;
+        &:hover, &:focus {
+            border: 2px solid #bd1d31;
+        }
     }
     figure {
         margin: 0;

@@ -101,7 +101,7 @@ $header-height: $row-height * 9;
         border-radius: 2px;
         letter-spacing: -0.03em;
         // font-family: "NanumSquareOTFB"; 
-        &:hover {
+        &:hover, &:focus {
             border: 1px solid $user-border-color;
         }
     }
@@ -133,7 +133,7 @@ $header-height: $row-height * 9;
         border-radius: 2px;
         font-size: $nav-font-size;
 
-        &:hover {
+        &:hover, &:focus {
             color: #fff;
             background: $nav-hover-color;
         }
