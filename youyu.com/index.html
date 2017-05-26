@@ -10,7 +10,7 @@
   <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 </head>
 <body class="show-grid">
-
+  <a class="skip-nav" href="#main">본문바로가기 영역</a>
   <header class="header">
     <h1 class="a11y-hidden">헤더영역입니다.</h1>
     <div class="header-inner container"> 
@@ -58,9 +58,7 @@
       </nav>
     </div>
   </header>
-  <main class="main">
-    <h1 class="a11y-hidden">메인 영역입니다.</h1>
-    <!-- s:filter -->
+  <!-- s:filter -->
     <div class="filter" aria-describedby="filter-descript">
       <div class="container">
         <p id="filter-descript">연령별, 스타일별로 제품을 필터링합니다.</p>
@@ -173,6 +171,8 @@
       <!-- e:filter-content -->
     </div>
     <!-- e:filter -->
+  <main id="main" class="main">
+    <h1 class="a11y-hidden">메인 영역입니다.</h1>
     <!-- s:banner -->
     <div class="banner container">
       <div class="row">

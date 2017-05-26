@@ -349,7 +349,7 @@
   letter-spacing: -0.03em;
 }
 
-.user-info a:hover {
+.user-info a:hover, .user-info a:focus {
   border: 1px solid #bf1d1d;
 }
 
@@ -388,7 +388,7 @@
   font-size: 1.1rem;
 }
 
-.navigation a:hover {
+.navigation a:hover, .navigation a:focus {
   color: #fff;
   background: #bd1d31;
 }
@@ -698,15 +698,15 @@
   padding-left: 0;
 }
 
-.best-seller-list li:hover > a {
-  border: 2px solid #bd1d31;
-}
-
 .best-seller-list a {
   display: block;
   border: 1px solid #ddd;
   box-sizing: border-box;
   padding: 20px;
+}
+
+.best-seller-list a:hover, .best-seller-list a:focus {
+  border: 2px solid #bd1d31;
 }
 
 .best-seller-list figure {
@@ -764,11 +764,12 @@
   height: 147px;
 }
 
-.brand-list a:hover {
+.brand-list a:hover, .brand-list a:focus {
   border: 2px solid #bd1d31;
 }
 
-.brand-list a:hover .brand-like-box {
+.brand-list a:hover .brand-like-box,
+.brand-list a:focus .brand-like-box {
   bottom: -2px;
 }
 
@@ -855,15 +856,15 @@
   padding-left: 0;
 }
 
-.brandnew-list li:hover > a {
-  border: 2px solid #bd1d31;
-}
-
 .brandnew-list a {
   display: block;
   border: 1px solid #ddd;
   box-sizing: border-box;
   padding: 21px;
+}
+
+.brandnew-list a:hover, .brandnew-list a:focus {
+  border: 2px solid #bd1d31;
 }
 
 .brandnew-list figure {
@@ -909,14 +910,14 @@
   padding-left: 0;
 }
 
-.tip-list li {
-  float: left;
-}
-
 .tip-list a {
   display: block;
   z-index: 999;
   height: 231px;
+}
+
+.tip-list a:hover, .tip-list a:focus {
+  border: 2px solid #bd1d31;
 }
 
 .best-review {
@@ -930,15 +931,15 @@
   padding-left: 0;
 }
 
-.best-review-list li:hover > a {
-  border: 2px solid #bd1d31;
-}
-
 .best-review-list a {
   display: block;
   border: 1px solid #ddd;
   box-sizing: border-box;
   padding: 20px;
+}
+
+.best-review-list a:hover, .best-review-list a:focus {
+  border: 2px solid #bd1d31;
 }
 
 .best-review-list figure {
@@ -1070,7 +1071,7 @@
   border-radius: 2px;
 }
 
-.footer-user-info-list a:hover {
+.footer-user-info-list a:hover, .footer-user-info-list a:focus {
   background: #fff;
   color: #aaa;
 }
@@ -1172,7 +1173,7 @@
   border-radius: 2px;
 }
 
-.sns-list li:nth-child(5):hover {
+.sns-list li:nth-child(5):hover, .sns-list li:nth-child(5):focus {
   background: linear-gradient(to bottom, #8121b3 10%, #c43062 50%, #d88341 90%);
   border: none;
 }
