@@ -783,7 +783,7 @@
   font-size: 2rem;
   font-weight: bold;
   color: #fff;
-  text-shadow: 1px -1px 0 0 #ddd;
+  text-shadow: 1px -1px #ddd;
   letter-spacing: -0.03em;
 }
 
@@ -958,9 +958,6 @@
   margin-top: 21px;
   text-align: left;
   color: #666;
-  white-space: wrap;
-  overflow: hidden;
-  text-overflow: ellipsis;
 }
 
 .best-review-list figcaption strong {
@@ -986,6 +983,255 @@
 
 .best-review-list .gpa span.actived-gpa-btn {
   background-position: 0 -151px;
+}
+
+/**
+ *
+ * header variable settings
+ *
+ */
+.search legend, .search label, .filter #filter-descript, .filter-content legend, .filter-content .filter-list li input[type="checkbox"] {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  /* IE 6,7 */
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+}
+
+.brand-list img, .brandnew-list .img-box img, .tip-list img, .best-review-list .img-box img {
+  width: 100%;
+  height: auto;
+}
+
+.search legend, .search label, .filter #filter-descript, .filter-content legend, .filter-content .filter-list li input[type="checkbox"] {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  /* IE 6,7 */
+  clip: rect(0, 0, 0, 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+}
+
+.brand-list img, .brandnew-list .img-box img, .tip-list img, .best-review-list .img-box img {
+  width: 100%;
+  height: auto;
+}
+
+.footer {
+  margin-top: 42px;
+}
+
+.footer-user-info {
+  background-color: #555;
+  height: 42px;
+}
+
+.footer-user-info-list {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 10.5px;
+  margin-bottom: 0;
+}
+
+.footer-user-info-list::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.footer-user-info-list li {
+  float: left;
+}
+
+.footer-user-info-list li:last-child a::after {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 1px;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #aaa;
+}
+
+.footer-user-info-list a {
+  padding: 5px 40px;
+  color: #aaa;
+  position: relative;
+  border-radius: 2px;
+}
+
+.footer-user-info-list a:hover {
+  background: #fff;
+  color: #aaa;
+}
+
+.footer-user-info-list a::before {
+  content: "";
+  position: absolute;
+  height: 15px;
+  width: 1px;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #aaa;
+}
+
+.footer-contents {
+  margin-top: 42px;
+  position: relative;
+}
+
+.company-info {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.company-info::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.company-info li {
+  float: left;
+  margin-right: 20px;
+}
+
+.company-info span {
+  color: #333;
+  line-height: 21px;
+  font-size: 1.2rem;
+  letter-spacing: -0.03em;
+}
+
+.company-info span strong {
+  font-weight: bold;
+  padding-right: 5px;
+}
+
+.copyright {
+  height: 21px;
+}
+
+.copyright p {
+  font-size: 1.2rem;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 21px;
+}
+
+.sns-list {
+  margin-top: 21px;
+}
+
+.sns-list ul {
+  list-style: none;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-left: 0;
+  height: 42px;
+}
+
+.sns-list li {
+  float: left;
+  margin-right: 5px;
+  position: relative;
+  top: 10.5px;
+}
+
+.sns-list li a.webchat {
+  background: #2dc100;
+}
+
+.sns-list li a.taobao {
+  background: #e8741f;
+}
+
+.sns-list li a.facebook {
+  background: #475993;
+}
+
+.sns-list li a.weibo {
+  background: #f29600;
+}
+
+.sns-list li:nth-child(5) {
+  border: 1px solid #aaa;
+  border-radius: 2px;
+}
+
+.sns-list li:nth-child(5):hover {
+  background: linear-gradient(to bottom, #8121b3 10%, #c43062 50%, #d88341 90%);
+  border: none;
+}
+
+.sns-list li:last-child {
+  margin-left: 20px;
+}
+
+.sns-list a {
+  box-sizing: border-box;
+  display: block;
+  border-radius: 2px;
+  text-align: center;
+}
+
+.sns-list a.square {
+  width: 26px;
+  height: 26px;
+}
+
+.sns-list a img {
+  display: inline-block;
+  max-width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.sns-list a img.center-img {
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.cs .cs-title {
+  margin: 0;
+  font-size: 1.8rem;
+  line-height: 21px;
+}
+
+.cs .tel {
+  display: block;
+  height: 42px;
+  line-height: 42px;
+  color: #bd1d31;
+  font-size: 2.1rem;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
+}
+
+.cs .cs-time {
+  list-style: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+.cs .cs-time li {
+  height: 21px;
+  line-height: 21px;
+  font-size: 1.2rem;
 }
 
 /*# sourceMappingURL=../map/stylesheet.css.map */
