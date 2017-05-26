@@ -172,7 +172,7 @@
         font-size: 2rem;
         font-weight: bold;
         color: #fff;
-        text-shadow: 1px -1px 0 0 #ddd;
+        text-shadow: 1px -1px #ddd;
         letter-spacing: -0.03em;
     }
     .brand-like-box {
@@ -340,9 +340,6 @@
         margin-top: $row-height;
         text-align: left;
         color: #666;
-        white-space: wrap;
-        overflow: hidden;
-        text-overflow: ellipsis;
         strong {
             display: block;
             color: #333;
