@@ -6,7 +6,7 @@ $general-font-color: #333;
 $user-font-color: #991717;
 
 .filter {
-    $filter-height: $row-height * 2;
+    $filter-height: $baseline-height * 2;
     // height: $filter-height;
     line-height: $filter-height;
     text-align: center;        
@@ -44,7 +44,7 @@ $user-font-color: #991717;
     line-height: 1.5;
     text-align: left;
     .title {
-        line-height: $row-height;
+        line-height: $baseline-height;
         span {
             color: $general-font-color;
             font-size: 1.8rem;
@@ -82,7 +82,7 @@ $user-font-color: #991717;
     }
 
     .age, .style {
-        margin-top: $row-height;
+        margin-top: $baseline-height;
     }   
 }
 
@@ -91,8 +91,8 @@ $user-font-color: #991717;
     $btn-checked-bg-color: #bd1d31;
     $btn-font-color: #fff;
     margin-left: -$gutter-width * 1.5;
-    margin-top: $row-height * 2 + $row-height / 8;
-    margin-bottom: $row-height;
+    margin-top: $baseline-height * 2 + $baseline-height / 8;
+    margin-bottom: $baseline-height;
     button {
         @include init-button;
         padding: 8px 22px;

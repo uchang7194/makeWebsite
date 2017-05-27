@@ -7,10 +7,21 @@
         clear: both;
     }
 }
+@mixin is-mg{
+    &.row, &.col {
+        margin-top: 0;
+        margin-left: 0;    
+    }
+    &:not(.row), &:not(.col) {
+        margin: 0;
+    } 
+}
 @mixin init-list-property{
+    
     list-style: none;
-    margin: 0;
     padding-left: 0;
+    
+    @include is-mg;
 }
 @mixin init-last-mgr{
     &:last-child {
@@ -26,7 +37,7 @@
     fieldset {
         border: none;
         padding: 0;
-        margin: 0;
+        @include is-mg;
     }
 
     legend {
@@ -36,5 +47,5 @@
 @mixin init-button {
     border: none;
     padding: 0;
-    margin: 0;
+    @include is-mg;
 }

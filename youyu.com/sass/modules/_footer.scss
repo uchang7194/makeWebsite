@@ -2,7 +2,7 @@
 @import "mixin";
 @import "placeholder";
 
-$baseline-height: $row-height;
+
 $default-font-color: #333;
 $emphasize-font-weight: bold;
 
@@ -69,10 +69,7 @@ $emphasize-font-weight: bold;
 }
 .company-info {
     @include clearfix;
-    list-style: none;
-    padding-left: 0;
-    margin-top: 0;
-    margin-bottom: 0;
+    @include init-list-property;
 
     li {
         float: left;
@@ -103,10 +100,7 @@ $emphasize-font-weight: bold;
 .sns-list {
     margin-top: $baseline-height;
     ul {
-        list-style: none;
-        margin-top: 0;
-        margin-bottom: 0;
-        padding-left: 0;
+        @include init-list-property;
         height: $baseline-height * 2;
     }
     li {
