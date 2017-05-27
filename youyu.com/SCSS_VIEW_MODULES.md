@@ -1,21 +1,20 @@
 # scss 파일 구조
             
-
-
-                 
-1.stylesheet  <━┳━ header <br>
-                ┃         <br>  
-                ┣━ main   <━━━━━┳ main_ init  <br>
-          ┏━━━━━┫               ┣ main_ banner <br>
-          ┃     ┣━ footer       ┣ main_ best_seller <br>
-          ┃     ┃               ┣ main_ brand <br>
-          ┃     ┗━ filter       ┣ main_ brandnew <br>
-          ┃                     ┣ main_ tip <br>
-          ┃                     ┗ main_ best_review <br>
-          ┃ ┏━  mixin <br>         
+```              
+1.stylesheet  <━┳━ header 
+                ┃          
+                ┣━ main   <━━━━━┳ main_ init  
+          ┏━━━━━┫               ┣ main_ banner 
+          ┃     ┣━ footer       ┣ main_ best_seller 
+          ┃     ┃               ┣ main_ brand 
+          ┃     ┗━ filter       ┣ main_ brandnew 
+          ┃                     ┣ main_ tip 
+          ┃                     ┗ main_ best_review 
+          ┃ ┏━  mixin         
           ┃ ┃
-          ┗━╋━  placeholder <br>
+          ┗━╋━  placeholder 
             ┃
-            ┗━  settings <br>
-<br>
-2.grid <br>
+            ┗━  settings 
+
+2.grid 
+```
