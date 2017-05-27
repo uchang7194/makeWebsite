@@ -1,7 +1,7 @@
 # scss 파일 구조
             
 ```              
-1.stylesheet  <━┳━ header 
+1.stylesheet 〈━━┳━ header 
                 ┃          
                 ┣━ main   <━━━━━┳ main_ init  
           ┏━━━━━┫               ┣ main_ banner 
