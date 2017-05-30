@@ -2,6 +2,3 @@
   - 0526 : 페이지 완성. html 접근성 부분과 scss 파트를 나누는 부분이 미흡. 되도록이면 scss는 모듈화와 변수명을 잘 짓는걸 목표.
   - 0527 : html 접근성 부분 완성(내 생각), scss 파일 모듈화.
 
-
-# pages-link
- - [youyu.com](youyu.com)
