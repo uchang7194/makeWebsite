@@ -1,0 +1,300 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+html, body {
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+}
+
+/**
+ *
+ * 타이포그래피 설계
+ *
+ */
+/**
+ *
+ * 그리드 시스템 설계 
+ *
+ */
+/*! grid.css @ 2017, yamoo9.net */
+/**
+ *
+ * 타이포그래피 설계
+ *
+ */
+/**
+ *
+ * 그리드 시스템 설계 
+ *
+ */
+.show-grid {
+  position: relative;
+}
+
+.show-grid::before,
+.show-grid::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 100vh;
+}
+
+.show-grid::before {
+  z-index: 10000;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(180deg, transparent 20px, #0cf 20px);
+  background-size: 1px 21px;
+}
+
+.show-grid::after {
+  z-index: 10010;
+  left: 50%;
+  width: 1180px;
+  background: linear-gradient(90deg, transparent 10px, rgba(251, 137, 137, 0.35) 10px, rgba(251, 137, 137, 0.35) 88.33333px, transparent 88.33333px);
+  background-size: 98.33333px 1px;
+  transform: translateX(-50%);
+}
+
+.container {
+  width: 1180px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.row.is-nesting > :first-child {
+  margin-left: 0;
+}
+
+.row.is-nesting > :last-child {
+  margin-right: 0;
+}
+
+.col {
+  float: left;
+  min-height: 50px;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.is-1 {
+  width: 78.33333px;
+}
+
+.is-offset-1 {
+  margin-left: 108.33333px;
+}
+
+.is-nesting .is-offset-1:first-child {
+  margin-left: 98.33333px;
+}
+
+.is-2 {
+  width: 176.66667px;
+}
+
+.is-offset-2 {
+  margin-left: 206.66667px;
+}
+
+.is-nesting .is-offset-2:first-child {
+  margin-left: 196.66667px;
+}
+
+.is-3 {
+  width: 275px;
+}
+
+.is-offset-3 {
+  margin-left: 305px;
+}
+
+.is-nesting .is-offset-3:first-child {
+  margin-left: 295px;
+}
+
+.is-4 {
+  width: 373.33333px;
+}
+
+.is-offset-4 {
+  margin-left: 403.33333px;
+}
+
+.is-nesting .is-offset-4:first-child {
+  margin-left: 393.33333px;
+}
+
+.is-5 {
+  width: 471.66667px;
+}
+
+.is-offset-5 {
+  margin-left: 501.66667px;
+}
+
+.is-nesting .is-offset-5:first-child {
+  margin-left: 491.66667px;
+}
+
+.is-6 {
+  width: 570px;
+}
+
+.is-offset-6 {
+  margin-left: 600px;
+}
+
+.is-nesting .is-offset-6:first-child {
+  margin-left: 590px;
+}
+
+.is-7 {
+  width: 668.33333px;
+}
+
+.is-offset-7 {
+  margin-left: 698.33333px;
+}
+
+.is-nesting .is-offset-7:first-child {
+  margin-left: 688.33333px;
+}
+
+.is-8 {
+  width: 766.66667px;
+}
+
+.is-offset-8 {
+  margin-left: 796.66667px;
+}
+
+.is-nesting .is-offset-8:first-child {
+  margin-left: 786.66667px;
+}
+
+.is-9 {
+  width: 865px;
+}
+
+.is-offset-9 {
+  margin-left: 895px;
+}
+
+.is-nesting .is-offset-9:first-child {
+  margin-left: 885px;
+}
+
+.is-10 {
+  width: 963.33333px;
+}
+
+.is-offset-10 {
+  margin-left: 993.33333px;
+}
+
+.is-nesting .is-offset-10:first-child {
+  margin-left: 983.33333px;
+}
+
+.is-11 {
+  width: 1061.66667px;
+}
+
+.is-offset-11 {
+  margin-left: 1091.66667px;
+}
+
+.is-nesting .is-offset-11:first-child {
+  margin-left: 1081.66667px;
+}
+
+.is-12 {
+  width: 1160px;
+}
+
+.is-offset-12 {
+  margin-left: 1190px;
+}
+
+.is-nesting .is-offset-12:first-child {
+  margin-left: 1180px;
+}
+
+.header {
+  padding-top: 50px;
+  background: url("../images/background.jpg") no-repeat;
+  background-size: cover;
+  height: 250px;
+}
+
+.logo {
+  position: relative;
+}
+
+.logo a {
+  position: absolute;
+  display: block;
+  width: 25px;
+  height: 25px;
+  left: 78.33333px;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+.gnb ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.gnb li {
+  float: left;
+  margin-right: 38px;
+}
+
+.gnb li:last-child {
+  margin-right: 0;
+}
+
+.gnb a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.sns ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.sns li {
+  float: left;
+  margin-left: 20px;
+}
+
+/*# sourceMappingURL=stylesheet.css.map */
