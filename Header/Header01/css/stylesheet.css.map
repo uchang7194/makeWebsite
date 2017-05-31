@@ -1,0 +1,13 @@
+{
+	"version": 3,
+	"file": "stylesheet.css",
+	"sources": [
+		"../sass/stylesheet.scss",
+		"../sass/modules/_reset.scss",
+		"../sass/modules/_mixin.scss",
+		"../sass/modules/_settings.scss",
+		"../sass/modules/_header.scss"
+	],
+	"names": [],
+	"mappings": ";ACAA,OAAO,CAAC,iEAAI;AAEZ,AAAA,IAAI,EAAE,AAAA,IAAI,CAAC;EACP,MAAM,EAAE,CAAC;CACZ;;AAED,AAAA,IAAI,CAAC;EACD,SAAS,EAAE,IAAI;CAClB;;AAED,AAAA,IAAI,CAAC;EACD,WAAW,EAAE,wBAAwB;EACrC,SAAS,EAAE,MAAM;CACpB;;AEZD;;;;GAIG;AAWH;;;;GAIG"
+}

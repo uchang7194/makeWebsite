@@ -1,0 +1,27 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+html, body {
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.4rem;
+}
+
+/**
+ *
+ * 타이포그래피 설계
+ *
+ */
+/**
+ *
+ * 그리드 시스템 설계 
+ *
+ */
+
+/*# sourceMappingURL=stylesheet.css.map */

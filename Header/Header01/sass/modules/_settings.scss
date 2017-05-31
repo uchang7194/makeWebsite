@@ -27,9 +27,9 @@ $guide-height: 100vh;
 // 컬럼의 총 개수
 $columns: 12;
 // 컬럼 폭
-$column-width: calc(940px / 12);
+$column-width: 940 / 12;
 // 컬럼 가이드 색상
-$column-color: $rgba(#fb8989, 0.35);
+$column-color: rgba(#fb8989, 0.35);
 // 거터 방향
 // before, after, split, no-gutter, inside
 $gutter-position: 'split';
@@ -46,7 +46,7 @@ $page-width: ($column-width + $gutter-width) * $columns;
 @function column-width($n) {
   @return $column-width * $n + $gutter-width * ($n - 1);
 }
-// 옵셋 개수에 따른 마진(margin-left) 구하는 공식
+// 옵셋 개수에 따른 마진(margin-left) 구하는 공 식
 // = 컬럼_폭 × 컬럼_개수 + (컬럼_폭 + 거터_절반_폭)
 @function offset-width($n) {
   @return column-width($n) + ($gutter-width + $half-gutter-width);
