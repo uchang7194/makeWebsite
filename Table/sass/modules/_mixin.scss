@@ -1,0 +1,22 @@
+@mixin init-list-style($is-col){
+    list-style: none;
+    padding-left: 0;
+
+    @if $is-col == true {
+        margin-top: 0;
+        margin-bottom: 0;
+    } @else {
+        margin: 0;
+    }
+
+}
+
+@mixin list-floating {
+    > li {
+     float: left;
+    }
+
+    &:after {
+        @extend %clearfix;
+    }
+}

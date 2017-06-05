@@ -1,0 +1,43 @@
+header {
+    background: lightblue;
+}
+
+.first-header{
+    $first-header-height: $baseline-height * 3;
+    height: $first-header-height;
+    line-height: $first-header-height;
+}
+.logo {
+    display: block;
+    font-size: 20px;
+    font-weight: bold;
+    letter-spacing: 1.6px;
+    text-transform: uppercase;
+    
+
+    span {
+        display: inline-block;
+        height: 100%;
+    }
+}
+
+.gnb {
+    
+    $gnb-font-color: #b3b3b3;
+    $gnb-actived-font-color: #666;
+
+    @include init-list-style(true);
+    @include list-floating;
+
+    li {
+        margin-left: 30px;
+    }
+    a {
+        color: $gnb-font-color;
+        text-transform: capitalize;
+        
+        .actived {
+            color: $gnb-actived-font-color;
+        }
+    }
+}

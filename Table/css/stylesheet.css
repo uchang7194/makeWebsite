@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto:400,500,700");
+html {
+  font-size: 10px;
+}
+
+body {
+  margin: 0;
+  font-size: 1.4rem;
+  font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+/**
+ *
+ * header variable settings
+ *
+ */
+.a11y-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  clip: rect(0, 0, 0, 0);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+  margin: -1px;
+}
+
+.gnb:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+/*! grid.css @ 2017, yamoo9.net */
+/**
+ *
+ * header variable settings
+ *
+ */
+.show-grid {
+  position: relative;
+}
+
+.show-grid::before,
+.show-grid::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  height: 1000vh;
+}
+
+.show-grid::before {
+  z-index: 10000;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(180deg, transparent 28px, #0cf 28px);
+  background-size: 1px 29px;
+}
+
+.show-grid::after {
+  z-index: 10010;
+  left: 50%;
+  width: 1141px;
+  background: linear-gradient(90deg, transparent 13.54167px, rgba(251, 137, 137, 0.35) 13.54167px, rgba(251, 137, 137, 0.35) 81.54167px, transparent 81.54167px);
+  background-size: 95.08333px 1px;
+  transform: translateX(-50%);
+}
+
+.container {
+  width: 1141px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.row::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.row.is-nesting > :first-child {
+  margin-left: 0;
+}
+
+.row.is-nesting > :last-child {
+  margin-right: 0;
+}
+
+.col {
+  float: left;
+  margin-left: 13.54167px;
+  margin-right: 13.54167px;
+}
+
+.is-1 {
+  width: 68px;
+}
+
+.is-offset-1 {
+  margin-left: 108.625px;
+}
+
+.is-nesting .is-offset-1:first-child {
+  margin-left: 95.08333px;
+}
+
+.is-2 {
+  width: 163.08333px;
+}
+
+.is-offset-2 {
+  margin-left: 203.70833px;
+}
+
+.is-nesting .is-offset-2:first-child {
+  margin-left: 190.16667px;
+}
+
+.is-3 {
+  width: 258.16667px;
+}
+
+.is-offset-3 {
+  margin-left: 298.79167px;
+}
+
+.is-nesting .is-offset-3:first-child {
+  margin-left: 285.25px;
+}
+
+.is-4 {
+  width: 353.25px;
+}
+
+.is-offset-4 {
+  margin-left: 393.875px;
+}
+
+.is-nesting .is-offset-4:first-child {
+  margin-left: 380.33333px;
+}
+
+.is-5 {
+  width: 448.33333px;
+}
+
+.is-offset-5 {
+  margin-left: 488.95833px;
+}
+
+.is-nesting .is-offset-5:first-child {
+  margin-left: 475.41667px;
+}
+
+.is-6 {
+  width: 543.41667px;
+}
+
+.is-offset-6 {
+  margin-left: 584.04167px;
+}
+
+.is-nesting .is-offset-6:first-child {
+  margin-left: 570.5px;
+}
+
+.is-7 {
+  width: 638.5px;
+}
+
+.is-offset-7 {
+  margin-left: 679.125px;
+}
+
+.is-nesting .is-offset-7:first-child {
+  margin-left: 665.58333px;
+}
+
+.is-8 {
+  width: 733.58333px;
+}
+
+.is-offset-8 {
+  margin-left: 774.20833px;
+}
+
+.is-nesting .is-offset-8:first-child {
+  margin-left: 760.66667px;
+}
+
+.is-9 {
+  width: 828.66667px;
+}
+
+.is-offset-9 {
+  margin-left: 869.29167px;
+}
+
+.is-nesting .is-offset-9:first-child {
+  margin-left: 855.75px;
+}
+
+.is-10 {
+  width: 923.75px;
+}
+
+.is-offset-10 {
+  margin-left: 964.375px;
+}
+
+.is-nesting .is-offset-10:first-child {
+  margin-left: 950.83333px;
+}
+
+.is-11 {
+  width: 1018.83333px;
+}
+
+.is-offset-11 {
+  margin-left: 1059.45833px;
+}
+
+.is-nesting .is-offset-11:first-child {
+  margin-left: 1045.91667px;
+}
+
+.is-12 {
+  width: 1113.91667px;
+}
+
+.is-offset-12 {
+  margin-left: 1154.54167px;
+}
+
+.is-nesting .is-offset-12:first-child {
+  margin-left: 1141px;
+}
+
+header {
+  background: lightblue;
+}
+
+.first-header {
+  height: 90px;
+  line-height: 90px;
+}
+
+.logo {
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+}
+
+.logo span {
+  display: inline-block;
+  height: 100%;
+}
+
+.gnb {
+  list-style: none;
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.gnb > li {
+  float: left;
+}
+
+.gnb li {
+  margin-left: 30px;
+}
+
+.gnb a {
+  color: #b3b3b3;
+  text-transform: capitalize;
+}
+
+.gnb a .actived {
+  color: #666;
+}
+
+/*# sourceMappingURL=stylesheet.css.map */
