@@ -1,23 +1,27 @@
 header {
-    background: lightblue;
+    box-shadow: 0 3px 10px 0 rgba(0,0,0,0.08);
 }
 
+$first-header-height: $baseline-height * 3;
+
 .first-header{
-    $first-header-height: $baseline-height * 3;
+    
     height: $first-header-height;
     line-height: $first-header-height;
 }
 .logo {
+    $logo-font-color: #666;
     display: block;
-    font-size: 20px;
+    font-size: 2rem;
     font-weight: bold;
     letter-spacing: 1.6px;
     text-transform: uppercase;
-    
+    color: $logo-font-color;
 
     span {
         display: inline-block;
         height: 100%;
+        padding-left: 41px;
     }
 }
 
@@ -30,14 +34,105 @@ header {
     @include list-floating;
 
     li {
-        margin-left: 30px;
+        margin-left: 25px;
+        &:nth-child(2) {
+            margin-left: 32px;
+        }
+        &:nth-child(3) {
+            margin-left: 30px;
+        }
+        &:nth-child(4) {
+            margin-left: 35px;
+            height: $first-header-height;
+            line-height: $first-header-height;
+            a {
+                display: block;
+                @include ir("../images/icons/header/first/menu.png", $first-header-height, 18px, true, false);
+            }   
+        }
     }
     a {
         color: $gnb-font-color;
         text-transform: capitalize;
         
-        .actived {
+        &.actived {
             color: $gnb-actived-font-color;
         }
     }
 }
+
+.search {
+    text-align: center;
+    input[type="text"] {
+        $input-font-color: #cdcdcd;
+    
+        @include init-form-style;
+        box-sizing: border-box;
+        width: 193px;
+        height: 50px;
+        border: 2px solid #f5f5f5;
+        border-radius: 25px;
+        padding-left: 53px;
+        text-transform: capitalize;
+        font-size: 1.2rem;
+        color: $input-font-color;
+    }
+    .search-group {
+        position: relative;
+    }
+    .search-btn {
+        
+        display: inline-block;
+        @include init-button-style;
+        @include ir("../images/icons/utills/search.png", 13px, 13px, false, true);
+        @include pos-vertical-centering;
+        left: 60px;   
+        cursor: pointer;
+    }    
+}
+
+.user-info {
+    position: relative;
+    margin-left: 0;
+    .bell {
+        width: 16px;
+        height: 19.5px;
+        @include pos-vertical-centering;
+        left: 10px;
+        line-height: 1;
+        cursor: pointer;
+        img {
+            width: 100%;
+            height: auto;
+            
+        }
+        .actived-dot {
+            position: absolute;
+            @include actived-dot(#1875f0);
+            top: -5px;
+            right: -5px;
+        }
+    }
+
+    .pf-img {
+        @include pos-vertical-centering; 
+        cursor: pointer;
+        left: 66px;
+        width: 36px;
+        height: 36px;
+        line-height: 1;
+        img {
+            border-radius: 50%;
+            width: 100%;
+            height: auto;
+        }
+    }
+
+    span {
+        margin-left: 133px;
+        font-weight: bold;
+        color: #808080;
+        cursor: pointer;
+    }
+}
+
