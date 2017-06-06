@@ -1,0 +1,70 @@
+@mixin init-list-style($is-col){
+    list-style: none;
+    padding-left: 0;
+
+    @if $is-col == true {
+        margin-top: 0;
+        margin-bottom: 0;
+    } @else {
+        margin: 0;
+    }
+
+}
+
+@mixin list-floating {
+    > li {
+     float: left;
+    }
+
+    &:after {
+        @extend %clearfix;
+    }
+}
+
+@mixin init-form-style {
+    padding: 0;
+    border: none;
+}
+
+
+@mixin ir($bg-image, $padding-top, $width, $isCenter, $isCover) {
+
+    width: $width;
+    height: 0;
+    padding-top: $padding-top;
+    background: url($bg-image) no-repeat;
+    overflow: hidden;
+
+    @if $isCenter == true {
+        background-position: 0 center;
+    }
+
+    @if $isCover == true {
+        background-size: cover;
+    }     
+}
+
+@mixin pos-vertical-centering {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+@mixin init-button-style {
+    padding: 0;
+    border: none;
+}
+
+@mixin actived-dot($color) {
+    background-color: $color;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+}
+
+@mixin marker-dot {
+    @include pos-vertical-centering;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+}

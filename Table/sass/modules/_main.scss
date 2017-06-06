@@ -1,0 +1,482 @@
+
+.main {
+    margin-top: $baseline-height;
+}
+
+// title
+
+.title {
+    $h2-font-color: #6d6d6d;
+    $h2-font-size: 3rem;
+    height: $baseline-height * 2;
+    line-height: $baseline-height;
+
+    h2 {
+        padding-left: 33px;
+        font-size: $h2-font-size;
+        font-weight: 300;
+        color: $h2-font-color;   
+    }
+}
+
+// util
+
+.utils {
+    box-sizing: border-box;
+    margin-top: $baseline-height;
+    border-bottom: 2px solid #e0e0e0;
+    
+}
+
+.compose {
+    padding: 20px;
+    padding-right: 40px;
+    border-right: 2px solid #e0e0e0;
+    button {
+        $button-bg-color: #1875f0;
+        $button-font-size: 1.2rem;
+        $button-font-color: #fff;
+        @include init-button-style;
+
+        cursor: pointer;
+        margin-right: 20px;
+        width: 183px;
+        height: 50px;
+        line-height: 50px;
+        border-radius: 4px;
+        background: $button-bg-color;
+        color: $button-font-color;
+        font-size: $button-font-size;
+        letter-spacing: 1.5px;  
+    }
+}
+
+.util-btns {
+    border-right: 2px solid #e0e0e0;
+    height: $baseline-height * 3;
+    line-height: $baseline-height * 3;
+    margin-left: 10px;
+    ul {
+        @include init-list-style(false);
+        @include list-floating;
+    }
+    li {
+        float: left;
+        margin-right: 27px;
+
+        &:last-child {
+            margin-right: 0;
+        }
+    }
+    a {
+        display: block;
+
+        img {
+            width: 100%;
+            height: auto;
+            vertical-align: middle;
+        }
+    }
+    .select-all {
+        margin-right: 28px;
+        padding-right: 17px;
+        vertical-align: middle;
+        background: url("../images/icons/utills/b_arrow.png") no-repeat;
+        background-position: right center;
+        height: $baseline-height * 3;
+        a {
+            display: block;
+            height: 100%;
+        }
+        input[type="checkbox"] {
+            display: none;
+        }
+        
+        input[type="checkbox"] + label {
+            position: relative;
+            display: inline-block;
+            border: none;
+            background: #fff;
+            vertical-align: middle;
+            margin: 0;
+            width: 20px;
+            height: 20px;
+            border: 2px solid #f0f0f0;
+            border-radius: 4px;
+            cursor: pointer;
+            
+        }
+        input[type="checkbox"]:checked + label:after {
+            content: "\2714";
+            position: absolute;
+            line-height: 20px;
+            top: 0;
+            left: 5px;
+            right: 0;
+            bottom: 0;
+            font-size: 12px;
+        }
+    }
+}
+
+.util-search {
+    height: $baseline-height * 3;
+    line-height: $baseline-height * 3;
+    position: relative;
+    margin-left: 5px;
+    @include init-form-style;
+    padding-right: 50px;
+    border-right: 2px solid #e0e0e0;
+
+    input[type="text"] {
+        border: none;
+        margin: 0;
+        padding: 0;
+        color: #cccccc;
+        text-transform: capitalize;
+    }
+    
+    button {
+        @include pos-vertical-centering;
+        @include init-button-style;
+        left: 165px;
+        @include ir("../images/icons/utills/search.png", 17.5px, 17.5px, false, true);
+        cursor: pointer;
+    }   
+}
+.sidemenu {
+    margin-right: 0;
+    padding-right: 60px;
+}
+.pages {
+    margin: 0;
+    height: $baseline-height * 3;
+    line-height: $baseline-height * 3;
+    white-space: nowrap;
+    position: relative;
+
+    .current-page {
+        @include pos-vertical-centering;
+        left: 25px;
+        font-weight: 500;
+        font-size: 1.3rem;
+        color: #999;
+    }
+
+    .btn-group {
+        @include pos-vertical-centering;
+        left: 120px;
+
+        button {
+            @include init-button-style;
+            vertical-align: middle;
+            cursor: pointer;
+            &.prev {
+                @include ir("../images/icons/utills/l_arrow.png", 14px, 14px, false, true);
+                margin-right: 22px;
+            }
+            &.next {
+                @include ir("../images/icons/utills/r_arrow.png", 14px, 14px, false, true);
+            }
+        }
+    }
+    
+    .settings {
+        @include pos-vertical-centering;
+        @include init-button-style;
+        @include ir("../images/icons/utills/settings.png", 19.4px, 20px, false, true);
+        left: 210px;
+        cursor: pointer;
+    }
+}
+
+.lnb {
+    padding-right: 60px;
+    margin-right: 0;
+    $a-font-color: #808080;
+    $a-font-size: 1.3rem;
+    
+    ul {
+        @include init-list-style(false);
+    }
+    li {
+        width: 100%;
+        padding-left: 29px;
+        margin-top: 32px;
+        height: $baseline-height;
+        line-height: $baseline-height;
+        position: relative;
+     
+        &:nth-child(1) {
+            margin-top: $baseline-height;
+            a {
+                background: url("../images/icons/utills/inbox.png") no-repeat;
+                background-position: left center;
+            }
+        }
+        &:nth-child(2) {
+            a {
+                background: url("../images/icons/utills/draft.png") no-repeat;
+                background-position: left center;
+            }
+        }
+        &:nth-child(3) {
+            a {
+                background: url("../images/icons/utills/send.png") no-repeat;
+                background-position: left center;
+            }
+        }
+        &:nth-child(4) {
+            a {
+                background: url("../images/icons/utills/trash.png") no-repeat;
+                background-position: left center;
+            }
+        }
+    }
+    a {
+        display: block;
+        color: $a-font-color;
+        font-size: $a-font-size;    
+        font-weight: 500;
+        padding-left: 40px;
+        text-transform: capitalize;
+        
+    }
+    div.is-notify {
+        @include pos-vertical-centering;
+        left: 170px;
+        font-size: 1.2rem;
+        color: #b3b3b3;
+        line-height: 24px;
+        text-align: center;
+        background: #f5f5f5;
+        border-radius: 4px;
+
+    }
+    div {
+        &.notified {
+            width: 21px;
+            height: 24px;
+        }
+        &.unnotified {
+            width: 0;
+            height: 0;
+        }
+    }
+}
+
+.markers {
+    border-top: 2px solid #e0e0e0;
+    margin-top: $baseline-height * 2;
+    margin-left: 0;
+    margin-right: 0;
+    padding-right: 60px;
+    ul {
+        @include init-list-style(false);
+    }
+    li {
+        position: relative;
+        padding-left: 63px;
+        margin-bottom: 32px;
+        font-weight: 500;
+        color: #999;
+        text-transform: capitalize;
+        height: $baseline-height;
+        line-height: $baseline-height;
+    }
+    .marker-dot {
+        @include marker-dot;
+        left: 29px;
+        &.project {
+            background-color: #f44336;
+        }
+        &.web {
+            background-color: #50e3c2;
+        }
+        &.home {
+            background-color: #bd10e0;
+        }
+        &.work {
+            background-color: #2096f3;
+        }
+    }
+}
+
+.table {
+    padding-top: $baseline-height - 2px;
+    border-left: 2px solid #e0e0e0;
+    margin-left: 0;
+    position: relative;
+    tr {
+        height: $baseline-height * 2;
+        line-height: $baseline-height * 2;
+    }
+    tr:nth-child(1) {
+        td {
+            top: $baseline-height;
+        }
+    }
+    td {
+        padding: 0;
+        position: absolute;
+        height: $baseline-height * 2;
+        line-height: $baseline-height * 2;
+    }
+}
+
+.chk-box {
+    left: 25px;
+    input[type="checkbox"] {
+        display: none;
+    }
+    
+    input[type="checkbox"] + label {
+        position: relative;
+        display: inline-block;
+        border: none;
+        background: #fff;
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+        border: 2px solid #f0f0f0;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    input[type="checkbox"]:checked + label:after {
+        content: "\2714";
+        position: absolute;
+        line-height: 20px;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        font-size: 12px;
+        background: #1875f0;
+        color: #fff;
+        text-align: center;
+    }
+    input[type="checkbox"]:checked + label {
+        border: 2px solid #1875f0;
+        opacity: 0.8;
+    }
+}
+
+.important {
+    left: 70px;
+    img {
+        vertical-align: middle;
+        position: relative;
+        top: -2px;
+        &.visible {
+            display: inline-block;
+        }
+        &.invisible {
+            display: none;
+        }
+    }   
+}
+.what-kind {
+    left: 110px;
+    .marker-dot {
+        @include marker-dot;
+        &.project {
+            background: #f44336;
+        }
+        &.web {
+            background: #50e3c2;
+        }
+        &.home {
+            background: #bd10e0;
+        }
+        &.work {
+            background: #2096f3;
+        }    
+        &.none {
+            background: transparent;
+        }
+    }
+}
+.profile-img {
+    text-transform: uppercase;
+    left: 150px;
+    .img-box {
+        border-radius: 50%;
+        width: 36px;
+        height: 36px;
+        position: relative;
+        top: 12px;
+        img {
+            border-radius: 50%;
+        }
+        &.no-img {
+            background: #ffe9c5;
+            line-height: 36px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #d36b1e;
+        }
+        &.pink-bg {
+            background: #ffe4ec;
+        }
+        &.red-color {
+            color: #c92b5f;
+        }
+        &.purple-bg {
+            background: #f5e3f9;
+        }
+        &.purple-color {
+            color: #813d85;
+        }
+        &.green-bg {
+            background: #e0f7d7;
+        }
+        &.green-color {
+            color: #008947;
+        }
+    }
+}
+
+.from {
+    left: 210px;
+    span {
+        text-transform: capitalize;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #666;
+    }
+}
+
+.subject {
+    left: 330px;
+    span {
+        position: absolute;
+        top: 0;
+        left: 0;
+        white-space: nowrap;
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #666;
+    }
+}
+
+.files {
+    right: 50px;
+    cursor: pointer;
+   .img-box {
+   }
+    img {
+        &.invisible {
+            display: none;
+        }
+    }
+}
+
+.date {
+    right: -40px;
+    time {
+        font-size: 1.2rem;
+        font-weight: bold;
+        color: #666;
+    }
+}

@@ -9,6 +9,574 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <header class="header">
+        <div class="header-inner container">
+            <h1 class="a11y-hidden">헤더 영역입니다.</h1>
+            <div class="first-header row">
+                <a class="logo col is-2" href="#"><span>quantum</span></a>
+                <ul class="gnb col is-4">
+                    <li><a class="actived" href="#">dashboard</a></li>
+                    <li><a href="#">statistics</a></li>
+                    <li><a href="#">pages</a></li>
+                    <li><a href="#">더보기 메뉴</a></li>
+                </ul>
+                <form class="search col is-3" action=""> 
+                    <div class="search-group">
+                        <label class="a11y-hidden" for="search-input">찾기</label>
+                        <input type="text" id="search-input" name="seach-input" placeholder="search">
+                        <button class="search-btn" type="submit">찾기버튼</button>
+                    </div>
+                </form>
+                <div class="user-info col is-3">
+                    <div class="bell">
+                        <img src="images/icons/utills/bell.png" alt="알림">
+                        <div class="actived-dot"></div>
+                    </div>
+                    <div class="pf-img">
+                        <img src="images/profile/pf_01.png" alt="RonaldHenry">
+                    </div>
+                    <span>RonaldHenry</span>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="location container">
+        <div class="row">
+            <ul class="loc col is-3">
+                <li><a href="#">dashboard</a></li>
+                <li><a href="#">mails</a></li>
+            </ul>
+        </div>
+    </div>
+    <main class="main container">
+        <h1 class="a11y-hidden">메인영역</h1>
+        <div class="title row">
+            <h2 class="col is-3">Mailbox CRM</h2>
+        </div>
+        <div class="utils row">
+            <div class="compose col is-2">
+                <button type="button">compose</button>
+            </div>
+            <div class="util-btns col is-4">
+                <ul>
+                    <li class="select-all">
+                        <a href="#">
+                            <input type="checkbox" id="selectAll">
+                            <label for="selectAll"></label>
+                        </a>
+                    </li>
+                    <li><a href="#" role="button"><img src="images/icons/utills/refresh.png" alt="새로고침"/></a></li>
+                    <li><a href="#" role="button"><img src="images/icons/utills/archive.png" alt="내려받기"/></a></li>
+                    <li><a href="#" role="button"><img src="images/icons/utills/spam.png" alt="스팸차단"/></a></li>
+                    <li><a href="#" role="button"><img src="images/icons/utills/trash.png" alt="휴지통"/></a></li>
+                    <li><a href="#" role="button"><img src="images/icons/utills/folder.png" alt="폴더"/></a></li>
+                    <li><a href="#" role="button"><img src="images/icons/utills/label.png" alt="라벨?"/></a></li>
+                </ul>
+            </div>
+            <div class="util-search col is-2">
+                <form action="">
+                    <div class="util-search-group">
+                        <label class="a11y-hidden" for="util-search-input">util search</label>
+                        <input type="text" id="util-search-input" name="util-search-input" placeholder="search">
+                        <button type="submit">메일찾기</button>
+                    </div>
+                </form>
+            </div>
+            <div class="pages col is-3">
+                <span class="current-page"> 1-10 of 100</span>
+                <div class="btn-group">
+                    <button class="prev" type="button">이전</button>
+                    <button class="next" type="button">다음</button>
+                </div>
+                <button class="settings" type="button">세팅</button>
+            </div>
+        </div>
+        <div class="row">
+            <div class="sidemenu col col is-2">
+                <div class="row is-nesting">
+                    <div class="lnb col is-2">
+                        <ul>
+                            <li>
+                                <a href="#">
+                                    inbox
+                                    <div class="is-notify notified">4</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    draft
+                                    <div class="is-notify notified">1</div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    sent mail
+                                    <div class="is-notify unnotified"></div>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    trash
+                                    <div class="is-notify notified">21</div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="markers col is-2">
+                        <ul>
+                            <li>
+                                <div class="marker-dot project"></div>
+                                project
+                            </li>
+                            <li>
+                                <div class="marker-dot web"></div>
+                                web
+                            </li>
+                            <li>
+                                <div class="marker-dot home"></div>
+                                home
+                            </li>
+                            <li>
+                                <div class="marker-dot work"></div>
+                                work
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <!--table-->
+            <div class="table col is-9">
+                <table class="row">
+                    <tr class="a11y-hidden">
+                        <th>체크박스</th>
+                        <th>중요표시</th>
+                        <th>종류</th>
+                        <th>프로필 이미지</th>
+                        <th>닉네임</th>
+                        <th>주제</th>
+                        <th>첨부자료</th>
+                        <th>날짜</th>
+                    </tr>
+                    <tr class="col is-9">
+                        <!--<div class="tr-wrapper">-->
+                            <td class="chk-box">
+                                <input type="checkbox" id="select1">
+                                <label for="select1"></label>
+                            </td>
+                            <td class="important">
+                                <img class="visible" src="images/icons/table/star.png" alt="선택하지 않음">
+                                <img class="invisible" src="images/icons/table/actived_star.png" alt="선택하지 않음">
+                            </td>
+                            <td class="what-kind">
+                                <div class="marker-dot project"></div>
+                            </td>
+                            <td class="profile-img">
+                                <div class="img-box no-img">
+                                    G
+                                </div>
+                            </td>
+                            <td class="from">
+                                <span>google inc</span>
+                            </td>
+                            <td class="subject">
+                                <span>Adwords Keyword Research For Beginners</span>
+                            </td>
+                            <td class="files">
+                                <div class="img-box">
+                                    <img src="images/icons/table/file.png" alt="첨부파일">
+                                </div>
+                            </td>
+                            <td class="date">
+                                <time datetime="07:24"><span>07:24 AM</span></time>
+                            </td>
+                        <!--</div> -->
+                    </tr>
+                    <tr class="col is-9">
+                        <td class="chk-box">
+                            <input type="checkbox" id="select13" name="table-select">
+                            <label for="select13"></label>
+                        </td>
+                        <td class="important">
+                            <img class="invisible" src="images/icons/table/star.png" alt="선택하지 않음">
+                            <img class="visible" src="images/icons/table/actived_star.png" alt="선택하지 않음">
+                        </td>
+                        <td class="what-kind">
+                            <div class="marker-dot project"></div>
+                        </td>
+                        <td class="profile-img">
+                            <div class="img-box no-img pink-bg red-color">
+                                a
+                            </div>
+                        </td>
+                        <td class="from">
+                            <span>apple</span>
+                        </td>
+                        <td class="subject">
+                            <span>Types Of Cookware Pots And Pans</span>
+                        </td>
+                        <td class="files">
+                            <div class="img-box">
+                                <img class="invisible" src="images/icons/table/file.png" alt="첨부파일">
+                            </div>
+                        </td>
+                        <td class="date">
+                            <time datetime="05:12"><span>05:12 AM</span></time>
+                        </td>
+                    </tr>
+                    <tr class="col is-9">
+                        <td class="chk-box">
+                            <input type="checkbox" id="select2" name="table-select">
+                            <label for="select2"></label>
+                        </td>
+                        <td class="important">
+                            <img class="visible" src="images/icons/table/star.png" alt="선택하지 않음">
+                            <img class="invisible" src="images/icons/table/actived_star.png" alt="선택하지 않음">
+                        </td>
+                        <td class="what-kind">
+                            <div class="marker-dot home"></div>
+                        </td>
+                        <td class="profile-img">
+                            <div class="img-box">
+                                <img src="images/profile/pf_02.png" alt="mathilda jensen">
+                            </div>
+                        </td>
+                        <td class="from">
+                            <span>mathilda jensen</span>
+                        </td>
+                        <td class="subject">
+                            <span>Telescopes 101</span>
+                        </td>
+                        <td class="files">
+                            <div class="img-box">
+                                <img src="images/icons/table/file.png" alt="첨부파일">
+                            </div>
+                        </td>
+                        <td class="date">
+                            <time datetime="05:12"><span>05:12 AM</span></time>
+                        </td>
+                    </tr>
+                    <tr class="col is-9">
+                        <td class="chk-box">
+                            <input type="checkbox" id="select3" name="table-select">
+                            <label for="select3"></label>
+                        </td>
+                        <td class="important">
+                            <img class="visible" src="images/icons/table/star.png" alt="선택하지 않음">
+                            <img class="invisible" src="images/icons/table/actived_star.png" alt="선택하지 않음">
+                        </td>
+                        <td class="what-kind">
+                            <div class="marker-dot home"></div>
+                        </td>
+                        <td class="profile-img">
+                            <div class="img-box no-img">
+                                g
+                            </div>
+                        </td>
+                        <td class="from">
+                            <span>google inc</span>
+                        </td>
+                        <td class="subject">
+                            <span>What is The Big R For Marketing Your Business</span>
+                        </td>
+                        <td class="files">
+                            <div class="img-box">
+                                <img src="images/icons/table/file.png" alt="첨부파일">
+                            </div>
+                        </td>
+                        <td class="date">
+                            <time datetime="05:12"><span>05:12 AM</span></time>
+                        </td>
+                    </tr>
+                    <tr class="col is-9">
+                        <td class="chk-box">
+                            <input type="checkbox" id="select4" name="table-select">
+                            <label for="select4"></label>
+                        </td>
+                        <td class="important">
+                            <img class="visible" src="images/icons/table/star.png" alt="선택하지 않음">
+                            <img class="invisible" src="images/icons/table/actived_star.png" alt="선택하지 않음">
+                        </td>
+                        <td class="what-kind">
+                            <div class="marker-dot none"></div>
+                        </td>
+                        <td class="profile-img">
+                            <div class="img-box no-img purple-bg purple-color">
+                                y
+                            </div>
+                        </td>
+                        <td class="from">
+                            <span>yell inc</span>
+                        </td>
+                        <td class="subject">
+                            <span>Gourmet Cooking For Pleasure</span>
+                        </td>
+                        <td class="files">
+                            <div class="img-box">
+                                <img class="invisible" src="images/icons/table/file.png" alt="첨부파일">
+                            </div>
+                        </td>
+                        <td class="date">
+                            <time datetime="03:12"><span>03:12 AM</span></time>
+                        </td>
+                    </tr>
+                    <tr class="col is-9">
+                        <td class="chk-box">
+                            <input type="checkbox" id="select5" name="table-select" checked>
+                            <label for="select5"></label>
+                        </td>
+                        <td class="important">
+                            <img class="visible" src="images/icons/table/star.png" alt="선택하지 않음">
+                            <img class="invisible" src="images/icons/table/actived_star.png" alt="선택하지 않음">
+                        </td>
+                        <td class="what-kind">
+                            <div class="marker-dot project"></div>
+                        </td>
+                        <td class="profile-img">
+                            <div class="img-box">
+                                <img src="images/profile/pf_03.png" alt="Bill Neal">
+                            </div>
+                        </td>
+                        <td class="from">
+                            <span>Bill Neal</span>
+                        </td>
+                        <td class="subject">
+                            <span>The Glossary Of Telescopes</span>
+                        </td>
+                        <td class="files">
+                            <div class="img-box">
+                                <img src="images/icons/table/file.png" alt="첨부파일">
+                            </div>
+                        </td>
+                        <td class="date">
+                            <time datetime="03:11"><span>03:11 AM</span></time>
+                        </td>
+                    </tr>
+                    <tr class="col is-9">
+                        <td class="chk-box">
+                            <input type="checkbox" id="select6" name="table-select">
+                            <label for="select6"></label>
+                        </td>
+                        <td class="important">
+                            <img class="visible" src="images/icons/table/star.png" alt="선택하지 않음">
+                            <img class="invisible" src="images/icons/table/actived_star.png" alt="선택하지 않음">
+                        </td>
+                        <td class="what-kind">
+                            <div class="marker-dot none"></div>
+                        </td>
+                        <td class="profile-img">
+                            <div class="img-box">
+                                <img src="images/profile/pf_04.png" alt="Lois James">
+                            </div>
+                        </td>
+                        <td class="from">
+                            <span>Lois James</span>
+                        </td>
+                        <td class="subject">
+                            <span>The Night Sky</span>
+                        </td>
+                        <td class="files">
+                            <div class="img-box">
+                                <img class="invisible" src="images/icons/table/file.png" alt="첨부파일">
+                            </div>
+                        </td>
+                        <td class="date">
+                            <time datetime="03:07"><span>03:07 AM</span></time>
+                        </td>
+                    </tr>
+                    <tr class="col is-9">
+                        <td class="chk-box">
+                            <input type="checkbox" id="select7" name="table-select">
+                            <label for="select7"></label>
+                        </td>
+                        <td class="important">
+                            <img class="visible" src="images/icons/table/star.png" alt="선택하지 않음">
+                            <img class="invisible" src="images/icons/table/actived_star.png" alt="선택하지 않음">
+                        </td>
+                        <td class="what-kind">
+                            <div class="marker-dot home"></div>
+                        </td>
+                        <td class="profile-img">
+                            <div class="img-box">
+                                <img src="images/profile/pf_05.png" alt="Earl Peterson">
+                            </div>
+                        </td>
+                        <td class="from">
+                            <span>Earl Peterson</span>
+                        </td>
+                        <td class="subject">
+                            <span>Choose The Perfect Accommodations</span>
+                        </td>
+                        <td class="files">
+                            <div class="img-box">
+                                <img class="invisible" src="images/icons/table/file.png" alt="첨부파일">
+                            </div>
+                        </td>
+                        <td class="date">
+                            <time datetime="02:12"><span>02:12 AM</span></time>
+                        </td>
+                    </tr>
+                    <tr class="col is-9">
+                        <td class="chk-box">
+                            <input type="checkbox" id="select8" name="table-select">
+                            <label for="select8"></label>
+                        </td>
+                        <td class="important">
+                            <img class="invisible" src="images/icons/table/star.png" alt="선택하지 않음">
+                            <img class="visible" src="images/icons/table/actived_star.png" alt="선택하지 않음">
+                        </td>
+                        <td class="what-kind">
+                            <div class="marker-dot none"></div>
+                        </td>
+                        <td class="profile-img">
+                            <div class="img-box">
+                                <img src="images/profile/pf_06.png" alt="Gussie Payne">
+                            </div>
+                        </td>
+                        <td class="from">
+                            <span>Gussie Payne</span>
+                        </td>
+                        <td class="subject">
+                            <span>Comment On The Importance Of Human Life</span>
+                        </td>
+                        <td class="files">
+                            <div class="img-box">
+                                <img class="invisible" src="images/icons/table/file.png" alt="첨부파일">
+                            </div>
+                        </td>
+                        <td class="date">
+                            <time datetime="02:11"><span>02:11 AM</span></time>
+                        </td>
+                    </tr>
+                    <tr class="col is-9">
+                        <td class="chk-box">
+                            <input type="checkbox" id="select9" name="table-select">
+                            <label for="select9"></label>
+                        </td>
+                        <td class="important">
+                            <img class="visible" src="images/icons/table/star.png" alt="선택하지 않음">
+                            <img class="invisible" src="images/icons/table/actived_star.png" alt="선택하지 않음">
+                        </td>
+                        <td class="what-kind">
+                            <div class="marker-dot project"></div>
+                        </td>
+                        <td class="profile-img">
+                            <div class="img-box">
+                                <img src="images/profile/pf_07.png" alt="Pearl Santiago">
+                            </div>
+                        </td>
+                        <td class="from">
+                            <span>Pearl Santiago</span>
+                        </td>
+                        <td class="subject">
+                            <span>Breast Lifts Improvement Without Implants</span>
+                        </td>
+                        <td class="files">
+                            <div class="img-box">
+                                <img src="images/icons/table/file.png" alt="첨부파일">
+                            </div>
+                        </td>
+                        <td class="date">
+                            <time datetime="01:12"><span>01:12 AM</span></time>
+                        </td>
+                    </tr>
+                    <tr class="col is-9">
+                        <td class="chk-box">
+                            <input type="checkbox" id="select10" name="table-select">
+                            <label for="select10"></label>
+                        </td>
+                        <td class="important">
+                            <img class="visible" src="images/icons/table/star.png" alt="선택하지 않음">
+                            <img class="invisible" src="images/icons/table/actived_star.png" alt="선택하지 않음">
+                        </td>
+                        <td class="what-kind">
+                            <div class="marker-dot web"></div>
+                        </td>
+                        <td class="profile-img">
+                            <div class="img-box no-img green-bg green-color">
+                            </div>
+                        </td>
+                        <td class="from">
+                            <span>Nelle Chandler</span>
+                        </td>
+                        <td class="subject">
+                            <span>Live Poker How To Win Tourmanment Games</span>
+                        </td>
+                        <td class="files">
+                            <div class="img-box">
+                                <img class="invisible" src="images/icons/table/file.png" alt="첨부파일">
+                            </div>
+                        </td>
+                        <td class="date">
+                            <time datetime="01:09"><span>01:09 AM</span></time>
+                        </td>
+                    </tr>
+                    <tr class="col is-9">
+                        <td class="chk-box">
+                            <input type="checkbox" id="select11" name="table-select">
+                            <label for="select11"></label>
+                        </td>
+                        <td class="important">
+                            <img class="visible" src="images/icons/table/star.png" alt="선택하지 않음">
+                            <img class="invisible" src="images/icons/table/actived_star.png" alt="선택하지 않음">
+                        </td>
+                        <td class="what-kind">
+                            <div class="marker-dot project"></div>
+                        </td>
+                        <td class="profile-img">
+                            <div class="img-box">
+                                <img src="images/profile/pf_08.png" alt="Bryan Quinn">
+                            </div>
+                        </td>
+                        <td class="from">
+                            <span>Bryan Quinn</span>
+                        </td>
+                        <td class="subject">
+                            <span>Cheap Romantic Vacations</span>
+                        </td>
+                        <td class="files">
+                            <div class="img-box">
+                                <img src="images/icons/table/file.png" alt="첨부파일">
+                            </div>
+                        </td>
+                        <td class="date">
+                            <time datetime="11:01"><span>11:01 AM</span></time>
+                        </td>
+                    </tr>
+                    <tr class="col is-9">
+                        <td class="chk-box">
+                            <input type="checkbox" id="select12" name="table-select">
+                            <label for="select12"></label>
+                        </td>
+                        <td class="important">
+                            <img class="visible" src="images/icons/table/star.png" alt="선택하지 않음">
+                            <img class="invisible" src="images/icons/table/actived_star.png" alt="선택하지 않음">
+                        </td>
+                        <td class="what-kind">
+                            <div class="marker-dot none"></div>
+                        </td>
+                        <td class="profile-img">
+                            <div class="img-box">
+                                <img src="images/profile/pf_09.png" alt="Irene Manning">
+                            </div>
+                        </td>
+                        <td class="from">
+                            <span>Irene Manning</span>
+                        </td>
+                        <td class="subject">
+                            <span>Breast Lifts Improvement Without Implants</span>
+                        </td>
+                        <td class="files">
+                            <div class="img-box">
+                                <img src="images/icons/table/file.png" alt="첨부파일">
+                            </div>
+                        </td>
+                        <td class="date">
+                            <time datetime="00:19"><span>00:19 PM</span></time>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </main>
 </body>
 </html>
