@@ -16,5 +16,5 @@
        └ 진행상황 [LINK](Header/Header01/WORKS.md)
 
 ## Table
- 1. [header01](Table/)
+ 1. [table 과제](Table/)
 
