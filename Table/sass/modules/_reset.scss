@@ -1,0 +1,21 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,500,700');
+
+html {
+    font-size: 10px;
+}
+body {
+    margin: 0;
+    font-size: 1.4rem;
+    font-family: 'Roboto', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6{
+    margin: 0;
+}
+
+a {
+    text-decoration: none;
+}
+.a11y-hidden {
+    @extend %a11y-hidden;
+}

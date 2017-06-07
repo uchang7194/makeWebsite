@@ -1,0 +1,36 @@
+
+.location {
+    margin-top: $baseline-height;
+    height: $baseline-height * 2;
+
+    .loc {
+        $loc-font-color: #c1c1c1;
+        $loc-font-size: 1.3rem;
+        @include init-list-style(true);
+        padding-top: $baseline-height;
+        height: $baseline-height;
+        padding-left: 33px;
+
+        li {
+            float: left;
+            &:first-child {
+                a {
+                    padding-right: 30px;
+                    background: url("../images/icons/header/second/arrow.png") no-repeat;
+                    background-position: right center;
+                }
+            }
+            &:last-child {
+                a {
+                    padding: 0 21px;
+                }
+            }
+        }
+
+        a {
+            color: $loc-font-color;
+            font-size: $loc-font-size;
+            text-transform: capitalize;
+        }
+    }
+}

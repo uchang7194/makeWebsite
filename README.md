@@ -1,5 +1,7 @@
 # pages-link
  - [youyu.com](https://uchang7194.github.io/makeWebsite/youyu.com/)
+ - [header01](https://uchang7194.github.io/makeWebsite/Header/Header01/)
+ - [table](https://uchang7194.github.io/makeWebsite/Table/)
 
 # makeWebsite
 
@@ -10,8 +12,9 @@
     
 
 ## Header
- 1. [header01](header)<br>
-       └ 진행상황 [LINK](Header/Header01/WORKS.md)<br>
-       └ 접근성부분 정리[LINK](Header/Header01/ACCESSIBILITY.md)<br>
-       └ SCSS모듈화 정리[LINK](Header/Header01/SCSS_VIEW_MODULES.md)<br>
+ 1. [header01](Header/Header01)<br>
+       └ 진행상황 [LINK](Header/Header01/WORKS.md)
+
+## Table
+ 1. [table 과제](Table/)
 
