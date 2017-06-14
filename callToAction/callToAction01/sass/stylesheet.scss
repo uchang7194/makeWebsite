@@ -1,25 +1,19 @@
 @import "modules/init";
 @import "modules/placeholder";
+@import "modules/mixin";
 @import "modules/settings";
 @import "modules/grid";
 
 .callToAction {
     box-sizing: border-box;
-    width: 1200px;
-    height: 370px;
-    margin: 0 auto;
+    @include fixedSize-width-center(1200px, 370px, true, 73px);
     background: url("../images/background.jpg") no-repeat;
     text-align: center;
-    padding-top: 73px;
     position: relative;
 
     .bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background: rgba(0, 0, 0, 0.1);
+        $bg-color: rgba(0, 0, 0, 0.1);
+        @include pos-ab-fullSize(true, $bg-color);
     }
 }
 
@@ -27,6 +21,7 @@
     position: relative;
     z-index: 999;
     $content-font-size: 1.3rem;
+    @include fixedSize-width-center(389px);
     width: 389px;
     margin: 0 auto;
     letter-spacing: 1px;

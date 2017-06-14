@@ -1,0 +1,25 @@
+
+@mixin pos-ab-fullSize($is-bgColor: false, $bgColor: rgba(0, 0, 0, 0)) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    
+    @if $is-bgColor == true {
+        background-color: $bgColor;
+    }
+}
+
+@mixin fixedSize-width-center($width: auto, $height: auto, $first-markup: false, $padding-top: 0, $padding-left: 0, $padding-bottom: 0, $padding-right: 0) {
+    width: $width;
+    height: $height;
+    margin: 0 auto;
+
+    @if $first-markup == true {
+        padding-top: $padding-top;
+        padding-right: $padding-right;
+        padding-bottom: $padding-bottom;
+        padding-left: $padding-left;
+    }
+}
