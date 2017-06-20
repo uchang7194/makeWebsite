@@ -1,0 +1,53 @@
+.clients {
+    @include fixed-vertical-centering(1200px, 600px);
+    
+    p {
+        $p-font-size: 1.6rem;
+        $p-font-color: #747474;
+        $p-font-weight: 400;
+
+        @include fixed-vertical-centering(452px);
+        text-align: center;
+        font-size: $p-font-size;
+        font-weight: $p-font-weight;
+        color: $p-font-color;
+        padding-top: 60px;
+        strong {
+            
+            $strong-font-size: 4.4rem;
+            $strong-font-color: #242526;
+            $strong-font-weight: 700;
+            display: block;
+            font-size: $strong-font-size;
+            font-weight: $strong-font-weight;
+            color: $strong-font-color;
+            margin-bottom: 25px;
+
+        }
+    }
+}
+
+.client-list {
+    @include reset-list;
+    height: 333.5px;
+    text-align: center;
+    li {
+        // float: left;
+        display: inline-block;
+        height: 100%;
+        line-height: 333.5px;
+        margin-right: 103px;
+
+        &:first-child {
+           margin-right: 89px; 
+        }
+        &:last-child{
+            margin-right: 0;
+        }
+    }
+
+    img {
+        @extend %responsive-object;
+        vertical-align: middle;
+    }
+}

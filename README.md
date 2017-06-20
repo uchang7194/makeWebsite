@@ -1,10 +1,12 @@
 # pages-link
  - [youyu.com](https://uchang7194.github.io/makeWebsite/youyu.com/)
+ - [table](https://uchang7194.github.io/makeWebsite/Table/)
  - header
    - [header01](https://uchang7194.github.io/makeWebsite/Header/Header01/)
  - callToAction  
    - [callToAction01](https://uchang7194.github.io/makeWebsite/callToAction/callToAction01/)
- - [table](https://uchang7194.github.io/makeWebsite/Table/)
+ - clients  
+   - [client01](https://uchang7194.github.io/makeWebsite/clients/clients01)
 
 # makeWebsite
 
@@ -20,8 +22,10 @@
 
 ## CallToAction
  1. [callToAction01](callToAction/callToAction01)<br>
-       └ 진행상황 [LINK](callToAction/callToAction01/WORKS.md)
 
 ## Table
  1. [table 과제](Table/)
+
+## clients 
+ 1. [clients01](clients/clients01)
 
