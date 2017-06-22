@@ -7,6 +7,8 @@
    - [callToAction01](https://uchang7194.github.io/makeWebsite/callToAction/callToAction01/)
  - clients  
    - [client01](https://uchang7194.github.io/makeWebsite/clients/clients01)
+ - contacts  
+   - [contacts](https://uchang7194.github.io/makeWebsite/contacts/contacts01)
 
 # makeWebsite
 
@@ -28,4 +30,8 @@
 
 ## clients 
  1. [clients01](clients/clients01)
+
+## contacts 
+ 1. [contacts01](contacts/contacts01)
+
 

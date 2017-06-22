@@ -1,0 +1,89 @@
+@import "modules/mixin";
+@import "modules/placeholder";
+@import "modules/fonts";
+@import "modules/init";
+// @import "modules/settings";
+// @import "modules/grid";
+
+.wrapper {
+    position: relative;
+    @include fixed-vertical-centering(1200px, 700px);
+    border: 1px solid #eee;
+}
+
+.info {
+    padding-top: 153px;
+    padding-left: 99px;
+
+    h2 {
+        margin-top: 0;
+    }
+
+    .info-list {
+        @include reset-list;
+    }
+    .sub-title {
+        $sub-title-font-size: 1.3rem;
+        $sub-title-font-color: #242526;
+        
+        text-transform: capitalize;
+        font-size: $sub-title-font-size;
+        color: $sub-title-font-color;
+        margin-bottom: 17px;
+    }
+    .content {
+        $content-font-size: 1.3rem;
+        $content-font-color: #747474;
+
+        font-size: $content-font-size;
+        color: $content-font-color;
+        letter-spacing: 0.3px;
+    }
+
+    .sns {
+        @include reset-list;
+        margin-top: 36px;
+        li {
+            float: left;
+            margin-right: 14px;
+        }
+
+        a {
+            $sns-border-color: #e7e7e7;
+            $sns-size: 36px;
+
+            display: block;
+            width: $sns-size;
+            height: $sns-size;
+            border-radius: 50%;
+            border: 1px solid $sns-border-color;
+            text-align: center;
+            line-height: $sns-size;
+            background-position: center;
+
+        }
+
+    }
+}
+
+.title {
+    $title-font-size: 3.6rem;
+    $title-font-color: #242526;
+
+    font-size: $title-font-size;
+    color: $title-font-color;
+    text-transform: capitalize;
+    margin-bottom: 70px;
+}
+
+
+.map {
+    position: absolute;
+    top: 0;
+    left: 518px;
+    width: 713px;
+
+    img {
+        @extend %responsive-object;
+    }
+}

@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,700");
+.map img {
+  width: 100%;
+  height: auto;
+}
+
+html, body {
+  margin: 0;
+}
+
+html {
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.4rem;
+  font-family: "Montserrat";
+}
+
+.wrapper {
+  position: relative;
+  margin: 0 auto;
+  width: 1200px;
+  height: 700px;
+  border: 1px solid #eee;
+}
+
+.info {
+  padding-top: 153px;
+  padding-left: 99px;
+}
+
+.info h2 {
+  margin-top: 0;
+}
+
+.info .info-list {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+}
+
+.info .sub-title {
+  text-transform: capitalize;
+  font-size: 1.3rem;
+  color: #242526;
+  margin-bottom: 17px;
+}
+
+.info .content {
+  font-size: 1.3rem;
+  color: #747474;
+  letter-spacing: 0.3px;
+}
+
+.info .sns {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
+  margin-top: 36px;
+}
+
+.info .sns li {
+  float: left;
+  margin-right: 14px;
+}
+
+.info .sns a {
+  display: block;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid #e7e7e7;
+  text-align: center;
+  line-height: 36px;
+  background-position: center;
+}
+
+.title {
+  font-size: 3.6rem;
+  color: #242526;
+  text-transform: capitalize;
+  margin-bottom: 70px;
+}
+
+.map {
+  position: absolute;
+  top: 0;
+  left: 518px;
+  width: 713px;
+}
+
+/*# sourceMappingURL=stylesheet.css.map */
