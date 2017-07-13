@@ -1,0 +1,25 @@
+// mobile, tablet, desktop... width
+// media query
+$mobile-width: 320px;
+$tablet-width: 768px;
+$desktop-width: 1200px;
+// mobile, tablet, desktop... height
+$column-height: 20px;
+// mobile, tablet, desktop... columns
+$mobile-columns: 4;
+$tablet-columns: 8;
+$desktop-columns: 12;
+// mobile, tablet, desktop... gutter
+$gutter: 20px;
+$half-gutter-width: $gutter / 2;
+// mobile, tablet, desktop... columns
+// ex) (320 - (20 * 4)) / 4 = 60 
+// $mobile-column-width: ($mobile-width - ($gutter * $mobile-columns)) / $mobile-columns; 
+// $tablet-column-width: ($tablet-width - ($gutter * $tablet-columns)) / $tablet-columns; 
+$desktop-column-width: ($desktop-width - ($gutter * $desktop-columns)) / $desktop-columns; 
+
+// show-grid settings
+    // 기본 높이
+$show-grid-height: 100vh;
+    // class name
+$show-grid-class: 'show-grid';

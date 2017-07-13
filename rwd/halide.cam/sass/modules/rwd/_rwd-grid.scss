@@ -1,0 +1,47 @@
+@import "utills/_rwd-utill-function";
+@import "utills/_rwd-utill-mixin";
+
+.row {
+    &::after {
+        content: '';
+        display: block;
+        clear: both;
+    }
+    &.is-nesting {
+        & > :first-child { margin-left: 0; }
+        & > :last-child { margin-right: 0; }
+    }
+}
+.col {
+    float: left;
+    margin-left: $half-gutter-width;
+    margin-right: $half-gutter-width;
+    
+}
+@include defaultDeviceBreakPoint(mobile){
+    .container {
+        width: 100%;
+    }
+    @for $i from 1 through $mobile-columns {
+        @include columnOffsetModule($i, $mobile-columns, 100%, 'mobile')
+    }
+}
+
+@include defaultDeviceBreakPoint(tablet){
+    .container {
+        width: 100%;
+    }
+    @for $i from 1 through $tablet-columns {
+        @include columnOffsetModule($i, $tablet-columns, 100%, 'tablet')
+    }
+}
+@include defaultDeviceBreakPoint(desktop){
+    .container {
+        width: $desktop-width;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    @for $i from 1 through $desktop-columns {
+        @include columnOffsetModule($i, $desktop-columns, $desktop-width, 'desktop')
+    }
+}

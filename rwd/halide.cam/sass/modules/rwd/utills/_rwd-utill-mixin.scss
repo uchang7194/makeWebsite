@@ -1,0 +1,13 @@
+@mixin columnOffsetModule($num, $columns, $device-width, $device) {
+    .is-#{$device}-#{$num}  {
+        width: column-width($num, calc(#{$device-width} / #{$columns} - #{$gutter}));
+        background: yellow; 
+    }
+    .is-#{$device}-offset-#{$num} {
+        $offset-width: offset-width($num, calc(#{$device-width} / #{$columns} - #{$gutter}));
+        margin-left: $offset-width;
+        .is-nesting &:first-child {
+        margin-left: calc(#{$offset-width} - #{$half-gutter-width});
+        }
+    }
+}

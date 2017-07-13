@@ -1,0 +1,49 @@
+@function single-param($val1: 0, $val2: 0) {
+
+    @if $val1 != 0 and $val2 != 0 {
+        @return false;
+    } @else {
+        @return true;
+    }
+}
+
+@function isZero($min, $max) {
+    @if $min != 0 {
+        @return min;
+    } @else {
+        @return max;
+    }
+}
+@mixin breakPoint($min: 0, $max: 0) {
+
+    @if single-param($min, $max) == true {
+        @if isZero($min, $max) == min {
+            @media screen and (min-width: $min){
+                @content;
+            }
+        } @else {
+            @media screen and (max-width: $max){
+                @content;
+            }
+        }
+    } @else {
+        @media screen and (min-width: $min) and (max-width: $max){
+            @content;
+        }
+    }
+}
+@mixin defaultDeviceBreakPoint($device) {
+    @if $device == mobile {
+        @include breakPoint(0, $tablet-width){
+            @content;
+        }
+    } @else if $device == tablet {
+        @include breakPoint($tablet-width + 1, $desktop-width){
+            @content;
+        }
+    } @else {
+        @include breakPoint($desktop-width + 1){   
+            @content;
+        }
+    }
+}

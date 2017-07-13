@@ -1,0 +1,72 @@
+.#{$show-grid-class} {
+    position: relative;
+}
+.#{$show-grid-class}::before,
+.#{$show-grid-class}::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: $show-grid-height;
+    transition: all 0.5s;
+}
+
+
+.#{$show-grid-class}::before {
+    $leading-limit: $column-height - 1;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(
+        180deg, 
+        transparent $leading-limit, 
+        #cf0 $leading-limit
+    );
+    background-size: 1px $column-height;
+}
+
+.#{$show-grid-class}::after {
+    $column-color: rgba(#fb8989, 0.35);
+    @include defaultDeviceBreakPoint(mobile){
+        $full-width: 100% / $mobile-columns;
+        $content-width: calc(100% - #{$half-gutter-width});
+        width: 100%;
+        background: linear-gradient(
+            90deg,
+            transparent $half-gutter-width,
+            $column-color $half-gutter-width,
+            $column-color $content-width,
+            transparent $content-width
+        );
+        background-size: $full-width 1px;
+    }
+
+    @include defaultDeviceBreakPoint(tablet){
+        $full-width: 100% / $tablet-columns;
+        $content-width: calc(100% - #{$half-gutter-width});
+        width: 100%;
+        background: linear-gradient(
+            90deg,
+            transparent $half-gutter-width,
+            $column-color $half-gutter-width,
+            $column-color $content-width,
+            transparent $content-width
+        );
+        background-size: $full-width 1px;
+    }
+
+    @include defaultDeviceBreakPoint(desktop){
+        $full-width: $desktop-column-width + $gutter;
+        left: 50%;
+        width: $desktop-width;
+        background: linear-gradient(
+            90deg,
+            transparent $half-gutter-width,
+            $column-color $half-gutter-width,
+            $column-color $desktop-column-width + $half-gutter-width,
+            transparent $desktop-column-width + $half-gutter-width
+        );
+        background-size: $full-width 1px;
+        transform: translateX(-50%);
+    }
+}
+

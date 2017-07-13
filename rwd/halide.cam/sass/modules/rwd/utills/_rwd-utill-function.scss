@@ -1,0 +1,6 @@
+@function column-width($n, $column-width) {
+  @return calc(#{$column-width} * #{$n} + #{$gutter} * (#{$n} - 1));
+}
+@function offset-width($n, $column-width) {
+  @return calc(#{$column-width} * #{$n} + #{$gutter} * (#{$n} - 1) + (#{$gutter} + #{$half-gutter-width}));
+}
