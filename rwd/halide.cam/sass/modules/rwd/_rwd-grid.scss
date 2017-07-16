@@ -20,7 +20,8 @@
 }
 @include defaultDeviceBreakPoint(mobile){
     .container {
-        width: 100%;
+        min-width: $mobile-container-width;
+        margin: 0 auto;
     }
     @for $i from 1 through $mobile-columns {
         @include columnOffsetModule($i, $mobile-columns, 100%, 'mobile')
@@ -29,7 +30,8 @@
 
 @include defaultDeviceBreakPoint(tablet){
     .container {
-        width: 100%;
+        max-width: $tablet-container-width;
+        margin: 0 auto;
     }
     @for $i from 1 through $tablet-columns {
         @include columnOffsetModule($i, $tablet-columns, 100%, 'tablet')

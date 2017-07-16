@@ -34,15 +34,15 @@
 }
 @mixin defaultDeviceBreakPoint($device) {
     @if $device == mobile {
-        @include breakPoint(0, $tablet-width){
+        @include breakPoint(0, $mobile-width){
             @content;
         }
     } @else if $device == tablet {
-        @include breakPoint($tablet-width + 1, $desktop-width){
+        @include breakPoint($mobile-width + 1, $tablet-width){
             @content;
         }
     } @else {
-        @include breakPoint($desktop-width + 1){   
+        @include breakPoint($tablet-width + 1){   
             @content;
         }
     }

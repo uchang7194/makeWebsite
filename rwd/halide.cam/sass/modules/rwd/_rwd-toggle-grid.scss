@@ -6,7 +6,7 @@
     content: '';
     position: absolute;
     top: 0;
-    width: 100%;
+    // width: 100%;
     height: $show-grid-height;
     transition: all 0.5s;
 }
@@ -14,8 +14,8 @@
 
 .#{$show-grid-class}::before {
     $leading-limit: $column-height - 1;
-    left: 0;
-    width: 100%;
+    // left: 0;
+    // width: 100%;
     background: linear-gradient(
         180deg, 
         transparent $leading-limit, 
@@ -24,12 +24,19 @@
     background-size: 1px $column-height;
 }
 
-.#{$show-grid-class}::after {
-    $column-color: rgba(#fb8989, 0.35);
-    @include defaultDeviceBreakPoint(mobile){
+$column-color: rgba(#fb8989, 0.35);
+@include defaultDeviceBreakPoint(mobile){
+    .#{$show-grid-class}::before {
+        min-width: $mobile-container-width;
+        left: 50%;
+        transform: translateX(-50%);
+    }  
+    .#{$show-grid-class}::after{
         $full-width: 100% / $mobile-columns;
         $content-width: calc(100% - #{$half-gutter-width});
-        width: 100%;
+        min-width: $mobile-container-width;
+        left: 50%;
+        transform: translateX(-50%);
         background: linear-gradient(
             90deg,
             transparent $half-gutter-width,
@@ -39,11 +46,20 @@
         );
         background-size: $full-width 1px;
     }
-
-    @include defaultDeviceBreakPoint(tablet){
+}
+@include defaultDeviceBreakPoint(tablet){
+    .#{$show-grid-class}::before {
+        // min-width: 0px;
+        width: $tablet-container-width; 
+        left: 50%;
+        transform: translateX(-50%);
+    }  
+    .#{$show-grid-class}::after {
         $full-width: 100% / $tablet-columns;
         $content-width: calc(100% - #{$half-gutter-width});
-        width: 100%;
+        width: $tablet-container-width;
+        left: 50%;
+        transform: translateX(-50%);
         background: linear-gradient(
             90deg,
             transparent $half-gutter-width,
@@ -53,11 +69,19 @@
         );
         background-size: $full-width 1px;
     }
-
-    @include defaultDeviceBreakPoint(desktop){
-        $full-width: $desktop-column-width + $gutter;
+}
+@include defaultDeviceBreakPoint(desktop){
+    .#{$show-grid-class}::before {
+        // min-width: 0px;
+        width: $desktop-container-width; 
         left: 50%;
-        width: $desktop-width;
+        transform: translateX(-50%);
+    }  
+    .#{$show-grid-class}::after {
+        $full-width: $desktop-column-width + $gutter;
+        width: $desktop-container-width;
+        left: 50%;
+        transform: translateX(-50%);
         background: linear-gradient(
             90deg,
             transparent $half-gutter-width,
@@ -69,4 +93,5 @@
         transform: translateX(-50%);
     }
 }
+
 

@@ -10,3 +10,12 @@ body {
     font-size: 1.4rem;
 }
 
+.a11y-hidden {
+    @extend %a11y-hidden;
+}
+
+a {
+    text-decoration: none;
+    color: #181818;
+}
+

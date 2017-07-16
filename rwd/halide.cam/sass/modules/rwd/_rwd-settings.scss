@@ -1,12 +1,17 @@
+// container width
+$mobile-container-width: 310px;
+$tablet-container-width: 524px;
+$desktop-container-width: 940px;
+
 // mobile, tablet, desktop... width
 // media query
-$mobile-width: 320px;
-$tablet-width: 768px;
-$desktop-width: 1200px;
+$mobile-width: 480px;
+$tablet-width: 720px;
+$desktop-width: 1024px;
 // mobile, tablet, desktop... height
 $column-height: 20px;
 // mobile, tablet, desktop... columns
-$mobile-columns: 4;
+$mobile-columns: 8;
 $tablet-columns: 8;
 $desktop-columns: 12;
 // mobile, tablet, desktop... gutter
@@ -20,6 +25,6 @@ $desktop-column-width: ($desktop-width - ($gutter * $desktop-columns)) / $deskto
 
 // show-grid settings
     // 기본 높이
-$show-grid-height: 100vh;
+$show-grid-height: 1000vh;
     // class name
 $show-grid-class: 'show-grid';
